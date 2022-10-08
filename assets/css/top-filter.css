@@ -10,16 +10,14 @@
 body{
     background-color: #e3f2fd;
 }
-#topFilter{
-    background-color: e3f2fd;
-  
-}
-.topfilternav{
-    background-color: red;
-    display: flex;
-    justify-content: space-between;
-}
 
+.topfilter{
+   
+    display: flex;
+    justify-content: start;
+margin-bottom: 50px;
+    height: 55px;
+}
 .downItems{
     position: absolute;
     z-index: 1;
@@ -32,10 +30,11 @@ body{
 }
 .select-btn{
     display: flex;
-    height: 50px;
+    height: 55px;
+    margin-top: 3px;
     align-items: center;
     justify-content: space-between;
-    padding: 0 16px;
+    padding: 0 16px 0 0;
     border-radius: 8px;
     cursor: pointer;
     background-color: #fff;
@@ -45,6 +44,7 @@ body{
     font-size: 17px;
     font-weight: 400;
     color: #333;
+    padding-left: 12px;
 }
 .select-btn .arrow-dwn{
     display: flex;
@@ -139,8 +139,16 @@ body{
     width: 100%;
     margin: 8px auto 30px;
   }
+  .form-topfilter{
+    height: 55px;
+    margin-top: 10px;
+    margin-left: 5px;
+    
+
+  }
   .form-topfilter input{
-    height: 70px;
+    border-radius: 30%;
+    height: 55px;
     background: #fff;
     border-radius: 0;
     border: 0;
