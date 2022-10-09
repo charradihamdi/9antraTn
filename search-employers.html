@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./assets/css/all.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
+  <link rel="stylesheet" media="mediatype and|not|only (expressions)" href="print.css">
   <title>Workoo - Freelancing HTML Template</title>
 
   <!-- All Plugins Css -->
@@ -251,7 +251,7 @@
     <div class="container">
 
       <div class="topfilter row">
-        <div class="col col-lg-3 col-sm-4" style="z-index: 2;">
+        <div class="col col-lg-3 col-sm-12" style="z-index: 2;">
           <div class="downItems ">
             <div class="select-btn">
               <span class="btn-text">Categories</span>
@@ -301,16 +301,16 @@
             </ul>
           </div>
         </div>
-        <div class="col-lg-9 col-md-8  ">
-          <div class="row">
-            <div class="form-topfilter form-group  col-lg-5 col-md-5 col-sm-2 mt-3 ">
+        <div class=" col-lg-9 col-md-8  ">
+          <div class="row" id="inputsTopFilter">
+            <div class="col-lg-5 col-md-5 col-sm-0 mt-3 d-none d-lg-block">
               <input type="text" class="form-control" style="border: 0;" placeholder="Job title" />
             </div>
-            <div class="form-topfilter col-lg-5 col-md-5 m-2 col-sm-2 mt-3" >
+            <div class=" col-lg-5 col-md-5 m-2 col-sm-0 mt-3 d-none d-lg-block" >
               <input type="text" class="form-control" placeholder="Localisation  |  postal code" style="border: 0;"/>
             </div>
 
-            <div class="search-icon  mt-3 ">
+            <div class="search-icon  mt-3 d-none d-lg-flex">
               <i class="fa-solid fa-magnifying-glass"></i>
             </div>
           </div>
@@ -321,9 +321,7 @@
 
   </div>
   <!--filters -->
-  <!--linkedin filter-->
-  
-<!--**-->
+
   <div class="topSecondfilter " >
     <div class="container">
       <div class="row d-flex justify-content-center">
