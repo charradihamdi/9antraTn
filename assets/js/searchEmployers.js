@@ -5,7 +5,7 @@ const selectBtn = document.querySelector(".select-btn"),
       teletravail=document.querySelector("#teletravail"),
       annualsalary=document.querySelector("#annual-salary"),
       compte=document.querySelector("#compte"),
-    
+
 //********nav filter************** */
 selectBtn.addEventListener("click", () => {
     selectBtn.classList.toggle("open");
@@ -57,3 +57,5 @@ $(document).ready(function(){
         $('.menu-btn').removeClass('disable')
     })
 })
+
+document.getElementById("range-style").disabled = true;
