@@ -7044,10 +7044,48 @@ ul.pricing_lists li:before {
 
 .simple-sidebar {
   border-radius: 0.4rem;
-  background: #ffffff;
+  background: #FFFFFF;
   padding: 0px;
   margin-bottom: 30px;
+  backdrop-filter: blur(15px);
+  position: inherit;
+ 
+  display: none;
 }
+.simple-sidebar.active{
+  display: flex;
+}
+.close-btn{
+  position: absolute;
+  color: #88C4F6;
+  font-size: 20px;
+  margin: 20px;
+  right: 0;
+  cursor: pointer;
+
+}
+.menu-btn{
+ position: fixed;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-size: 20px;
+ margin: 25px;
+ cursor: pointer;
+ border: 0px solid black;
+ left: 0;
+ border: 1px solid #ffff;
+ border-radius: 50%;
+ width: 40px;
+ height: 40px;
+ color:#ffffff ;
+ box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+ background-color: black;
+}
+.menu-btn.disable{
+  display: none;
+}
+
 .simple-sidebar.border {
   border: 1px solid #e6eaf1;
 }
