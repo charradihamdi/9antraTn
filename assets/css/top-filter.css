@@ -154,9 +154,11 @@ body{
     height: 55px;
     margin-top: 10px;
     margin-left: 5px;
-    
-
   }
+  .form-topfilter.disable{
+ display: none;
+  }
+  .f
   .form-topfilter input{
     border-radius: 30%;
     height: 55px;
@@ -203,13 +205,13 @@ body{
     border-radius: 50%;
     cursor: pointer;
   }
-
+  input[type="range"] .thumb{display: none;}
 
   input[type="range"] {
     height: 40px;
     display: flex;
     left: -20%;
-    background-color: #e7e5e5;
+    background-color: #f3f3f3;
     border-radius: 8px;
     margin-top: -10px;
     -webkit-appearance: none;

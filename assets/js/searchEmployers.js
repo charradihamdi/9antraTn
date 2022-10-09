@@ -32,7 +32,7 @@ items.forEach(item => {
         let checked = document.querySelectorAll(".checked"),
             btnText = document.querySelector(".btn-text");
 
-            if(checked && checked.length > 0){
+            if(checked && checked.length > 0 && selectBtn){
                 btnText.innerText = `${checked.length} Selected`;
             }else{
                 btnText.innerText = "Select categories";
@@ -58,4 +58,8 @@ $(document).ready(function(){
     })
 })
 
-document.getElementById("range-style").disabled = true;
+
+console.log(window.innerWidth)
+
+
+
