@@ -11528,3 +11528,6 @@ textarea.form-control::placeholder {
   #checkboxes label:hover {
     background-color: #1e90ff;
   }
+  .main-section{
+    right: -5%;
+  }

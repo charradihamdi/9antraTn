@@ -1,9 +1,28 @@
+//variable declaration
 const selectBtn = document.querySelector(".select-btn"),
       items = document.querySelectorAll(".item");
-      selectBtn1 = document.querySelector(".select-btn-1"),
-      items1 = document.querySelectorAll(".item-1");
+      emploie=document.querySelector("#emploie"),
+      teletravail=document.querySelector("#teletravail"),
+      annualsalary=document.querySelector("#annual-salary"),
+      compte=document.querySelector("#compte"),
+    
+//********nav filter************** */
 selectBtn.addEventListener("click", () => {
     selectBtn.classList.toggle("open");
+});
+
+emploie.addEventListener("click", () => {
+    emploie.classList.toggle("open");
+    console.log(emploie.id)
+});
+teletravail.addEventListener("click", () => {
+    teletravail.classList.toggle("open");
+});
+annualsalary.addEventListener("click", () => {
+    annualsalary.classList.toggle("open");
+});
+compte.addEventListener("click", () => {
+    compte.classList.toggle("open");
 });
 
 items.forEach(item => {
@@ -16,10 +35,11 @@ items.forEach(item => {
             if(checked && checked.length > 0){
                 btnText.innerText = `${checked.length} Selected`;
             }else{
-                btnText.innerText = "Select Language";
+                btnText.innerText = "Select categories";
             }
     });
 })
+
 
 
       
@@ -27,8 +47,10 @@ items.forEach(item => {
 $(document).ready(function(){
     $('.menu-btn').click(function(){
         $('.simple-sidebar').addClass('active')
-        $('.menu-btn').addClass('disable')
-     
+         $('.menu-btn').addClass('disable')
+         $('.main-section').removeClass('main-section col-lg-11 col-md-12 col-sm-12')
+         $('.main-section').addClass('col-lg-8')
+      
     })
     $('.close-btn').click(function(){
         $('.simple-sidebar').removeClass('active')

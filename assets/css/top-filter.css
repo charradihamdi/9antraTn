@@ -21,6 +21,14 @@ body{
     height: 80px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
 }
+.topSecondfilter {
+
+     display: flex;
+     justify-content: start;
+     margin-bottom: 50px;
+     height: 80px;
+   
+ }
 .downItems{
     position: inherit;
     z-index: 1;
@@ -72,7 +80,7 @@ body{
     background-color: #fff;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     display: none;
- 
+    z-index: 1;
 }
 .select-btn.open ~ .list-items{
     display: block;
