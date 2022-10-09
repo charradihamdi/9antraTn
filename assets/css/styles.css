@@ -7066,6 +7066,7 @@ ul.pricing_lists li:before {
 }
 .menu-btn{
  position: fixed;
+ z-index: 1;
  display: flex;
  justify-content: center;
  align-items: center;
