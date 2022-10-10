@@ -11547,3 +11547,6 @@ textarea.form-control::placeholder {
   .main-section{
     right: -5%;
   }
+  #main-section{
+    margin-left: 60px;
+  }
