@@ -325,10 +325,10 @@
   <div class="topSecondfilter " >
     <div class="container">
       <div class="row d-flex justify-content-center">
-        <div class="col col-lg-3 col-sm-3" style="z-index: 1;">
+        <div class="col col-lg-2 col-sm-4" style="z-index: 1;">
           <div class="downItems ">
             <div class="select-btn" id="emploie">
-              <span class="btn-text">Emploie Offers</span>
+              <span class="btn-text text-center">Offers</span>
               <span class="arrow-dwn">
                 <i class="fa-solid fa-chevron-down"></i>
               </span>
@@ -347,7 +347,7 @@
           </div>
         </div>
         <!--2 eme filtr-->
-        <div class="col col-lg-2 col-sm-2" style="z-index: 1;">
+        <div class="col col-lg-3 col-sm-4" style="z-index: 1;">
           <div class="downItems ">
             <div class="select-btn" id="teletravail">
               <span class="btn-text">Telétravail</span>
@@ -375,7 +375,7 @@
             </ul>
           </div>
         </div>
-        <div class="col col-lg-3 col-sm-2" style="z-index: 1;">
+        <div class="col col-lg-3 d-sm-none d-lg-flex" style="z-index: 1;">
           <div class="downItems ">
 
             <div class="select-btn" id="annual-salary">
@@ -388,12 +388,11 @@
             </div>
             <ul class="list-items">
               <!--slicer--> 
-              <input type="range" class="range-style" >
+              <input type="range" class="form-range" min="0" max="5" id="customRange2">
               <li class="item">
                 <span class="checkbox">
                   <i class="fa-solid fa-check check-icon"></i>
                 </span>
-
                 <span class="item-text">5000$</span>
               </li>
               <li class="item">
@@ -419,11 +418,16 @@
                 </span>
 
                 <span class="item-text">5000$</span>
+              </li>
+              <li class="row d-flex justify-content-end flex-row" >
+                <button type="button" class="btn btn-danger ">close</button>
+                <button type="button" class="filter-btn col-8 btn ml-2">show result</button>
               </li>
             </ul>
+            
           </div>
         </div>
-        <div class="col col-lg-2 col-sm-2" style="z-index: 0;">
+        <div class="col col-lg-2 col-sm-2 d-sm-none" style="z-index: 0;">
           <div class="downItems ">
             <div class="select-btn" id="compte">
               <span class="btn-text">compte</span>
@@ -443,7 +447,7 @@
             </ul>
           </div>
         </div>
-        <div class="col col-lg-2 col-sm-2" style="z-index: 0;">
+        <div class="col col-lg-2 d-sm-none d-lg-flex" style="z-index: 0;">
           <div class="downItems ">
             <div class="select-btn" id="compte">
               <span class="btn-text">day rate</span>
@@ -464,6 +468,13 @@
             </ul>
           </div>
         </div>
+        <div class="col col-lg-2 col-sm-4" style="z-index: 0;">
+          <div class="downItems ">
+            <div class="select-btn" id="compte">
+              <span class="text-center pl-4">All filters</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -482,7 +493,7 @@
           <div class="menu-btn">
             <i class="fas fa-bars"></i>
           </div>
-          <div class="simple-sidebar sm-sidebar">
+          <div class="simple-sidebar sm-sidebar" id="sidebarEmp">
             <din class="menu">
               <!--display sidebar-toggleshow toggle close-->
               <div class="search-sidebar_header">
@@ -914,7 +925,7 @@
 
         <!-- Item Wrap Start -->
 
-        <div class="col-lg-8 col-md-12 col-sm-12" id="main-section">
+        <div class="col-lg-12 col-md-12 col-sm-12" id="main-section">
           <div class="row d-flex justify-content-end">
             <div class="col-lg-12 col-md-12 col-sm-12" style="z-index: 0;">
               <!-- Filter Search -->
