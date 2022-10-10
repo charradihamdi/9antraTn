@@ -5,10 +5,13 @@ const selectBtn = document.querySelector(".select-btn"),
       teletravail=document.querySelector("#teletravail"),
       annualsalary=document.querySelector("#annual-salary"),
       compte=document.querySelector("#compte"),
-
+      dayrate=document.querySelector("#dayrate"),
 //********nav filter************** */
 selectBtn.addEventListener("click", () => {
     selectBtn.classList.toggle("open");
+});
+dayrate.addEventListener("click", () => {
+    dayrate.classList.toggle("open");
 });
 
 emploie.addEventListener("click", () => {
