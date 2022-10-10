@@ -207,4 +207,10 @@ body{
     border-radius: 50%;
     cursor: pointer;
   }
-  
+  .filter-btn-result{
+    
+    background-color: #0A66C2;
+    color: white;
+    border-radius: 20px;
+
+  }
