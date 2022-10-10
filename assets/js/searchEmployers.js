@@ -13,10 +13,11 @@ selectBtn.addEventListener("click", () => {
 
 emploie.addEventListener("click", () => {
     emploie.classList.toggle("open");
-    console.log(emploie.id)
 });
 teletravail.addEventListener("click", () => {
     teletravail.classList.toggle("open");
+   
+    
 });
 annualsalary.addEventListener("click", () => {
     annualsalary.classList.toggle("open");
@@ -32,11 +33,11 @@ items.forEach(item => {
         let checked = document.querySelectorAll(".checked"),
             btnText = document.querySelector(".btn-text");
 
-            if(checked && checked.length > 0 && selectBtn){
-                btnText.innerText = `${checked.length} Selected`;
-            }else{
-                btnText.innerText = "Select categories";
-            }
+            // if(checked && checked.length > 0 && selectBtn){
+            //     btnText.innerText = `${checked.length} Selected`;
+            // }else{
+            //     btnText.innerText = "Select categories";
+            // }
     });
 })
 

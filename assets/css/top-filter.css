@@ -26,7 +26,7 @@ body{
      justify-content: start;
      margin-bottom: 50px;
      height: 80px;
-   
+    
  }
 
 .downItems{
@@ -85,6 +85,11 @@ body{
 .select-btn.open ~ .list-items{
     display: block;
 }
+.select-btn.close ~ .list-items{
+    display: none;
+}
+
+
 .list-items .item{
     display: flex;
     align-items: center;
