@@ -31,6 +31,7 @@ body {
   height: 80px;
 }
 
+
 .downItems {
   z-index: 1;
   max-width: 100%;
@@ -53,10 +54,16 @@ body {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 .select-btn .btn-text {
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 400;
   color: #333;
   padding-left: 12px;
+}
+@media (max-width: 1000px) {
+  .select-btn .btn-text {
+    font-size: 14px;
+  }
+ 
 }
 .select-btn .arrow-dwn {
   display: flex;
@@ -222,8 +229,13 @@ body {
   .search-btn {
     display: block;
   }
+  .topSecondfilter {
+    height: max-content;
+  } 
 }
-
+.select-btn .show{
+    display: none;
+}
 @media (max-width: 991px) {
    
 .topfilter {
@@ -234,8 +246,16 @@ body {
   }
 }
 
+
+   
+
+ 
 .filter-btn-result {
   background-color: #0a66c2;
   color: white;
   border-radius: 20px;
+}
+
+#filter-th{
+  display: none;
 }
