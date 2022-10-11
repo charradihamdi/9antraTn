@@ -14,7 +14,7 @@ const jobs = {
       type: "full-time",
       posted: "2015-01-20",
       location: "US",
-      skills: ["HTML / CSS", "Python", "Javascript", "Redis"],
+      skills: ["HTML / CSS", "Python", "Javascript", "Redis","React js"],
       salaryRange: {
         from: 90000,
         to: 100000,
@@ -111,6 +111,7 @@ items.forEach((item) => {
   });
 });
 
+
 $(document).ready(function () {
   $(".menu-btn").click(function () {
     $(".simple-sidebar").addClass("active");
@@ -139,8 +140,9 @@ jobsTitle.forEach((item) => {
       for (let i = 0; i < itemtext.length; i++) {
         for(let j=0;j<job.skills.length;i++){
           if (itemtext[i].innerText == job.skills[j]) {
-            console.log('first')
+            console.log(itemtext)
             itemtext[i].style='padding-left: 1rem;background:#C2E7FF;border:0px solid black;width:100%;border-radius: 20px;'
+            items[i].classList.toggle('checked')=true
           }
         }
       
