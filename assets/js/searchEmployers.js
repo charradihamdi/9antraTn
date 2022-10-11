@@ -1,10 +1,12 @@
 const jobs = {
-  company: "Pied Piper",
-  url: "http://piedpiper.com/",
-  remoteFriendly: true,
-  market: "SaaS",
+  companies: {Keyrus:24000,SAGEMCOM:260,goDev:14000},
+  Experience: ["Internship | alternant","First Job"],
+  AnnualSalary: [15000,10000,5000,3000],
   size: "10-50",
   jobs: [
+    {
+      title:'All'
+    },
     {
       position: "Software Engineer",
       title: "Backend Developer",
@@ -14,7 +16,7 @@ const jobs = {
       type: "full-time",
       posted: "2015-01-20",
       location: "US",
-      skills: ["HTML / CSS", "Python", "Javascript", "Redis","React js"],
+      skills: ["Python", "Javascript", "Redis","React js","HTML / CSS"],
       salaryRange: {
         from: 90000,
         to: 100000,
@@ -26,6 +28,7 @@ const jobs = {
       },
       perks: ["free food", "gym membership"],
       apply: "http://piedpiper.com/jobs/backend-developer/apply",
+      offers:22
     },
     {
       position: "Software Engineer",
@@ -48,6 +51,7 @@ const jobs = {
       },
       perks: ["free food", "gym membership"],
       apply: "http://piedpiper.com/jobs/frontend-developer/apply",
+      offers:150,
     },
     {
       position: "UI/UX Designer",
@@ -70,6 +74,7 @@ const jobs = {
       },
       perks: ["free food", "gym membership"],
       apply: "http://piedpiper.com/jobs/ux-designer/apply",
+      offers:1000,
     },
   ],
 };
@@ -136,17 +141,23 @@ jobs.jobs.forEach((job) => {
 jobsTitle = document.querySelectorAll("#listDynamicItems .item");
 jobsTitle.forEach((item) => {
   item.addEventListener("click", () => {
+ 
     jobs.jobs.forEach((job) => {
+    
+      for(let j=0;j<job.skills.length;j++){
+      
       for (let i = 0; i < itemtext.length; i++) {
-        for(let j=0;j<job.skills.length;i++){
-          if (itemtext[i].innerText == job.skills[j]) {
-            console.log(itemtext)
+          if(itemtext[i].innerText == job.skills[j]) {
+ 
+            console.log(i,j)
             itemtext[i].style='padding-left: 1rem;background:#C2E7FF;border:0px solid black;width:100%;border-radius: 20px;'
             items[i].classList.toggle('checked')=true
           }
+          
         }
       
       }
+   
     });
   });
 });
