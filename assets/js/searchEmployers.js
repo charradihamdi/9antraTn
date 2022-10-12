@@ -1,33 +1,41 @@
 const jobs = {
   categories: [
-  {
-    All: 'All',
-    result: 25000
-  }, {
-    emploie: "Emplois",
-    result: 10000
-  }, {
-    Entreprise: 'Entrepries',
-    result: 3000
-  }, {
-    poste: 'Poste',
-    result: 20
-  }],
-  companies: [{
-    Keyrus: 24000
-  }, {
-    SAGEMCOM: 260
-  }, {
-    goDev: 14000
-  }
-],
+    {
+      All: "All",
+      result: 25000,
+    },
+    {
+      emploie: "Emplois",
+      result: 10000,
+    },
+    {
+      Entreprise: "Entrepries",
+      result: 3000,
+    },
+    {
+      poste: "Poste",
+      result: 20,
+    },
+  ],
+  companies: [
+    {
+      Keyrus: 24000,
+    },
+    {
+      SAGEMCOM: 260,
+    },
+    {
+      goDev: 14000,
+    },
+  ],
   Experience: ["Internship | alternant", "First Job"],
   AnnualSalary: [15000, 10000, 5000, 3000],
   jobs: [
     {
       position: "Software Engineer",
       title: "Backend Developer",
-      description: "You will help us build API for our compression infrastructure.",
+      description:
+        "You will help us build API for our compression infrastructure.",
       url: "http://piedpiper.com/jobs/backend-developer",
       type: "full-time",
       posted: "2015-01-20",
@@ -44,12 +52,13 @@ const jobs = {
       },
       perks: ["free food", "gym membership"],
       apply: "http://piedpiper.com/jobs/backend-developer/apply",
-      offers: 22
+      offers: 22,
     },
     {
       position: "Software Engineer",
       title: "Frontend Developer",
-      description: "You will help us build dashboard for our compression infrastructure.",
+      description:
+        "You will help us build dashboard for our compression infrastructure.",
       url: "http://piedpiper.com/jobs/frontend-developer",
       type: "full-time",
       posted: "2015-01-20",
@@ -104,31 +113,32 @@ const closeOtherToggleButton = (item) => {
 };
 
 const filters = {
-  "SKILLS":{
-    items : ["java","css"]
+  SKILLS: {
+    items: ["java", "css"],
   },
-  "EXPERIENCE":{
-    items:["junior"]
-  }
-}
+  EXPERIENCE: {
+    items: ["junior"],
+  },
+};
 
-const getFilters = (id,item)=>{
-
-  filters[id].items.push(item)
+const getFilters = (id, item) => {
+  filters[id].items.push(item);
 
   // manupulation DOM
   // get ID
   // change innerHTML
-}
+};
 
-function submitHandler(event){
-  event.preventDefault()
+function submitHandler(event) {
+  event.preventDefault();
 
-  // get Inputs values 
+  // get Inputs values
   let jobOffer = document.querySelector('input[name="jobOffer"]:checked').value;
-
+  let Skills = document.querySelector('input[name="Skills"]:checked').value;
+  let jobType=document.querySelector('input[name="jobType"]:checked').value;
+  console.log(jobOffer, Skills);
   // Build body request
-  debugger
+  debugger;
 }
 
 selectBtn.forEach((item) =>
@@ -143,17 +153,12 @@ Skills = document.querySelectorAll("#Skills .item");
 
 Skills.forEach((item) => {
   item.addEventListener("click", (event) => {
-    console.log(item.classList.toggle('checked'))
+    console.log(item.classList.toggle("checked"));
     item.classList.toggle("checked");
     let checked = document.querySelectorAll("#SkillsList .item .checked"),
       btnText = document.querySelector("#Skills .btn-text");
 
 
-    //  if(checked && checked.length > 0){
-    //     btnText.innerText = `${checked.length} Selected`;
-    //  }else{
-    //      btnText.innerText = "Select categories";
-    //  }
   });
 });
 //Telétravail filter
@@ -161,42 +166,26 @@ typeOfJob = document.querySelectorAll("#typeOfJob .item");
 
 typeOfJob.forEach((item) => {
   item.addEventListener("click", (event) => {
-
     item.classList.toggle("checked");
 
     let checked = document.querySelectorAll(".item .checked"),
       btnText = document.querySelector("#typeOfJob .btn-text");
 
-
-     if(checked ){
-        btnText.innerText = `${checked.length} Selected`;
-     }else{
-         btnText.innerText = "Select categories";
-     }
-  });
-});
-//Telétravail filter
-typeOfJob = document.querySelectorAll("#typeOfJob .item");
-
-typeOfJob.forEach((item) => {
-  item.addEventListener("click", (event) => {
-
-    item.classList.toggle("checked");
-
-    let checked = document.querySelectorAll(".item .checked"),
-      btnText = document.querySelector("#typeOfJob .btn-text");
   
-
-     if(checked && checked.length > 0){
-        btnText.innerText = `${checked.length} Selected`;
-     }else{
-         btnText.innerText = "Select categories";
-     }
   });
 });
+//Telétravail filter
+typeOfJob = document.querySelectorAll("#typeOfJob .item");
 
+typeOfJob.forEach((item) => {
+  item.addEventListener("click", (event) => {
+    item.classList.toggle("checked");
 
+    let checked = document.querySelectorAll(".item .checked"),
+      btnText = document.querySelector("#typeOfJob .btn-text");
 
+  });
+});
 
 //********************************** */
 $(document).ready(function () {
