@@ -103,6 +103,34 @@ const closeOtherToggleButton = (item) => {
   });
 };
 
+const filters = {
+  "SKILLS":{
+    items : ["java","css"]
+  },
+  "EXPERIENCE":{
+    items:["junior"]
+  }
+}
+
+const getFilters = (id,item)=>{
+
+  filters[id].items.push(item)
+
+  // manupulation DOM
+  // get ID
+  // change innerHTML
+}
+
+function submitHandler(event){
+  event.preventDefault()
+
+  // get Inputs values 
+  let jobOffer = document.querySelector('input[name="jobOffer"]:checked').value;
+
+  // Build body request
+  debugger
+}
+
 selectBtn.forEach((item) =>
   item.addEventListener("click", () => {
     item.classList.toggle("open");
@@ -110,36 +138,67 @@ selectBtn.forEach((item) =>
   })
 );
 
-items.forEach((item, i) => {
+//skills filter
+Skills = document.querySelectorAll("#Skills .item");
+
+Skills.forEach((item) => {
   item.addEventListener("click", (event) => {
-    debugger
+    console.log(item.classList.toggle('checked'))
     item.classList.toggle("checked");
+    let checked = document.querySelectorAll("#SkillsList .item .checked"),
+      btnText = document.querySelector("#Skills .btn-text");
 
-    let checked = document.querySelectorAll(".item .checked"),
-      btnText = document.querySelector(".btn-text");
-    checkbox = document.querySelectorAll(".checkbox li");
 
-    console.log(checked)
-    //  if(checked && checked.length > 0 && selectBtn){
+    //  if(checked && checked.length > 0){
     //     btnText.innerText = `${checked.length} Selected`;
     //  }else{
     //      btnText.innerText = "Select categories";
     //  }
-    jobselected = item.querySelector('.item-text')
+  });
+});
+//Telétravail filter
+typeOfJob = document.querySelectorAll("#typeOfJob .item");
 
-    jobs.categories.forEach((job) => {
-      if (jobselected.innerText == job.All || jobselected.innerText == job.emploie || jobselected.innerText == job.Entreprise || jobselected.innerText == job.poste) {
-        console.log(true)
-        document.querySelector('#Category-btn').innerText = `result ${job.result}`
+typeOfJob.forEach((item) => {
+  item.addEventListener("click", (event) => {
 
-      }
-    })
+    item.classList.toggle("checked");
+
+    let checked = document.querySelectorAll(".item .checked"),
+      btnText = document.querySelector("#typeOfJob .btn-text");
 
 
+     if(checked ){
+        btnText.innerText = `${checked.length} Selected`;
+     }else{
+         btnText.innerText = "Select categories";
+     }
+  });
+});
+//Telétravail filter
+typeOfJob = document.querySelectorAll("#typeOfJob .item");
+
+typeOfJob.forEach((item) => {
+  item.addEventListener("click", (event) => {
+
+    item.classList.toggle("checked");
+
+    let checked = document.querySelectorAll(".item .checked"),
+      btnText = document.querySelector("#typeOfJob .btn-text");
+  
+
+     if(checked && checked.length > 0){
+        btnText.innerText = `${checked.length} Selected`;
+     }else{
+         btnText.innerText = "Select categories";
+     }
   });
 });
 
 
+
+
+//********************************** */
 $(document).ready(function () {
   $(".menu-btn").click(function () {
     $(".simple-sidebar").addClass("active");
@@ -152,34 +211,5 @@ $(document).ready(function () {
   $(".close-btn").click(function () {
     $(".simple-sidebar").removeClass("active");
     $(".menu-btn").removeClass("disable");
-  });
-});
-
-// jobs.jobs.forEach((job) => {
-//   var li = document.createElement("li");
-//   li.className = "item";
-//   li.appendChild(document.createTextNode(job.title));
-//   listDynamicItems.appendChild(li);
-// });
-
-jobsTitle = document.querySelectorAll("#listDynamicItems .item");
-jobsTitle.forEach((item) => {
-  item.addEventListener("click", () => {
-
-    jobs.jobs.forEach((job) => {
-
-      for (let j = 0; j < job.skills.length; j++) {
-        for (let i = 0; i < itemtext.length; i++) {
-          if (itemtext[i].innerText == job.skills[j]) {
-            console.log(i, j)
-            itemtext[i].style = 'padding-left: 1rem;background:#C2E7FF;border:0px solid black;width:100%;border-radius: 20px;'
-            items[i].classList.toggle('checked') = true
-          }
-
-        }
-
-      }
-
-    });
   });
 });

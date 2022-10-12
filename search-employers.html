@@ -250,7 +250,7 @@
   <!--topfilteer-->
   <div class="container">
 
-    <form class="topfilter row" onsubmit="">
+    <form class="topfilter row" onsubmit="submitHandler(event)">
       <div class="col col-lg-3 col-sm-12" style="z-index: 7;">
         <div class="downItems" id="jobsOffers" name="jobsOffers">
           <div class="select-btn">
@@ -262,32 +262,26 @@
           <ul class="list-items no-ul-list filter-list" id="listDynamicItems">
             <input placeholder="search" />
             <li class="item form-group">
-              <label for="a1" class="item-text checkbox-custom-label">All </label>
+              <input id="e2" class="radio-custom" name="jobOffer" type="radio">
+              <label for="e2" class="radio-custom-label">All</label>
             </li>
-            <li class="item">
-              <label for="a2" class="item-text checkbox-custom-label">Financial Service </label>
+            <li class="item form-group">
+              <input id="e2" class="radio-custom" name="jobOffer" type="radio">
+              <label for="e2" class="radio-custom-label">Financial Service</label>
             </li>
-            <li class="item">
-
-              <label for="a3" class="item-text checkbox-custom-label">Art, Design, Media</label>
+            <li class="item form-group">
+              <input id="e2" class="radio-custom" name="jobOffer" type="radio">
+              <label for="e2" class="radio-custom-label">Art, Design, Media</label>
             </li>
-            <li class="item">
-
-              <label for="a4" class="item-text checkbox-custom-label">Coach & Education </label>
+            <li class="item form-group">
+              <input id="e2" class="radio-custom" name="jobOffer" type="radio">
+              <label for="e2" class="radio-custom-label">Coach & Education </label>
             </li>
-            <li class="item">
-
-              <label for="a5" class="item-text checkbox-custom-label">Apps Developements </label>
-              <ul class="no-ul-list filter-list">
-          
-              </ul>
-            </li >
-            <li class="item">
-              <label for="a6" class="item-text checkbox-custom-label">Writing & Translation </label>
+            <li class="item form-group">
+              <input id="e2" class="radio-custom" name="jobOffer" type="radio">
+              <label for="e2" class="radio-custom-label">Apps Developements  </label>
             </li>
-
           </ul>
-
 
         </div>
       </div>
@@ -301,55 +295,53 @@
             <input type="text" class="form-control" placeholder="Localisation  |  postal code" style="border: 0;" />
           </div>
           <div class="col-sm-1  col-md-1  mt-3  d-lg-flex">
-            <div class="search-icon">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
+            <button type="submit" class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
           </div>
         </div>
       </div>
 
-    </div>
+   
 
   </div>
 
 
   <!--filters -->
-
-  <form style="margin-top: 0;" onsubmit="">
     <div class="topSecondfilter"> 
     <div class=" container mt-2">
       <div class="row d-flex justify-content-center">
         <div class="col col-lg-2 col-sm-4" style="z-index: 1;">
           <div class="downItems " name="Skills" id="Skills">
-            <div class="select-btn" id="emploie">
+            <div class="select-btn" id="Skills">
               <span class="btn-text text-center">Skills</span>
               <span class="arrow-dwn">
                 <i class="fa-solid fa-chevron-down "></i>
               </span>
             </div>
-            <ul class="list-items no-ul-list filter-list"> 
+            <ul class="list-items no-ul-list filter-list" id="SkillsList"> 
               <li class="item">
-                <input id="c2" class="checkbox-custom" name="Parking" type="checkbox" />
-                <label for="c2" class="checkbox-custom-label">iPhone & Android </label>
+                <input id="c2" class="checkbox-custom" name="SkillsList" type="checkbox" />
+                <label for="c2" class="item-text checkbox-custom-label">iPhone & Android </label>
               </li>
               <li class="item">
-                <input id="c3" class="checkbox-custom" name="Coffee" type="checkbox" />
-                <label for="c3" class="checkbox-custom-label">Java & AJAX</label>
+                <input id="c3" class="checkbox-custom" name="skills" name="SkillsList" type="checkbox" />
+                <label for="c3" class="item-text checkbox-custom-label" >Java & AJAX</label>
               </li>
               <li class="item">
-                <input id="c4" class="checkbox-custom" name="Mother" type="checkbox" />
-                <label for="c4" class="checkbox-custom-label">Account Manager </label>
+                <input id="c4" class="checkbox-custom" name="skills" type="checkbox" name="SkillsList"/>
+                <label for="c4" class="item-text checkbox-custom-label">Account Manager </label>
               </li>
               <li class="item">
-                <input id="c5" class="checkbox-custom" name="Outdoor" type="checkbox" />
-                <label for="c5" class="checkbox-custom-label">WordPress </label>
+                <input id="c5" class="checkbox-custom" name="skills" type="checkbox" name="SkillsList"/>
+                <label for="c5" class="item-text checkbox-custom-label">WordPress </label>
               </li>
               <li class="item">
-                <input id="c6" class="checkbox-custom" name="Pet" type="checkbox" />
-                <label for="c6" class="checkbox-custom-label">Magento </label>
+                <input id="c6" class="checkbox-custom" name="skills" type="checkbox" name="SkillsList"/>
+                <label for="c6" class="item-text checkbox-custom-label">Magento </label>
               </li>
               <li class="row d-flex justify-content-end flex-row" style="border-top: 1px solid #D9D9D9;">
-                <button type="button" class="filter-btn-result col-8 btn ml-2 mt-2" id="Exper-btn">show result</button>
+                <button  type="submit" class="filter-btn-result col-8 btn ml-2 mt-2" id="Exper-btn">show result</button>
               </li>
             </ul>
           </div>
@@ -357,98 +349,79 @@
 
         <!--2 eme filtr-->
         <div class="col-lg-3 col-sm-4" style="z-index: 1;">
-          <div class="downItems ">
-            <div class="select-btn" id="teletravail">
-              <span class="btn-text">onSite/Hybride</span>
+           <div class="downItems " name="typeOfJob" id="typeOfJob">
+            <div class="select-btn" id="typeOfJob">
+              <span class="btn-text text-center">Type of Job</span>
               <span class="arrow-dwn">
-                <i class="fa-solid fa-chevron-down"></i>
+                <i class="fa-solid fa-chevron-down "></i>
               </span>
             </div>
-            <ul class="list-items">
+            <ul class="list-items" id="jobType">
               <input placeholder="search" />
               <li class="item">
-                <span class="checkbox">
-                  <i class="fa-solid fa-check check-icon"></i>
-                </span>
-
-                <span class="item-text">On Site</span>
+                <input id="c4" class="checkbox-custom" value="on site" name="jobType" type="checkbox"/>
+                <label for="c4" class="item-text checkbox-custom-label">On Site </label>
               </li>
               <li class="item">
-                <span class="checkbox">
-                  <i class="fa-solid fa-check check-icon"></i>
-                </span>
-
-                <span class="item-text">Hybride</span>
+                <input id="c4" class="checkbox-custom" value="Hybride"  name="jobType" type="checkbox" />
+                <label for="c4" class="item-text checkbox-custom-label">Hybride </label>
               </li>
               <li class="item">
-                <span class="checkbox">
-                  <i class="fa-solid fa-check check-icon"></i>
-                </span>
-
-                <span class="item-text">a distance</span>
+                <input id="c4" class="checkbox-custom" value="Remote" name="jobType" type="checkbox" />
+                <label for="c4" class="item-text checkbox-custom-label">Remote </label>
               </li>
               <li class="row d-flex justify-content-end flex-row" style="border-top: 1px solid #D9D9D9;">
 
-                <button type="button" class="filter-btn-result col-8 btn ml-2 mt-2">show result</button>
+                <button type="submit" class="filter-btn-result col-8 btn ml-2 mt-2">show result</button>
               </li>
             </ul>
           </div>
         </div>
 
+        
+        <div class="col-lg-2 d-lg-block d-md-none d-sm-none" style="z-index: 1;">
+          <div class="downItems " name="Experience" id="Experience">
+            <div class="select-btn" id="Experience">
+              <span class="btn-text text-center">Experience</span>
+              <span class="arrow-dwn">
+                <i class="fa-solid fa-chevron-down "></i>
+              </span>
+            </div>
+            <ul class="list-items" id="Experience">
+              <input placeholder="search" />
+              <li class="item">
+                <input id="c4" class="checkbox-custom" name="experience" value='Internship alternant' type="checkbox" />
+                <label for="c4" class="item-text checkbox-custom-label">Internship alternant </label>
+              </li>
+              <li class="item">
+                <input id="c4" class="checkbox-custom" value="First Job" name="experience" type="checkbox" />
+                <label for="c4" class="item-text checkbox-custom-label">First Job </label>
+              </li>
+              <li class="item">
+                <input id="c4" class="checkbox-custom" name="experience" type="checkbox" />
+                <label for="c4" class="item-text checkbox-custom-label">Manager </label>
+              </li>
+              <li class="item">
+                <input id="c4" class="checkbox-custom" name="experience" type="checkbox" />
+                <label for="c4" class="item-text checkbox-custom-label">Director </label>
+              </li>
+              <li class="row d-flex justify-content-end flex-row" style="border-top: 1px solid #D9D9D9;">
+                <button type="submit" class="filter-btn-result col-8 btn ml-2 mt-2" id="Exper-btn">show result</button>
+              </li>
+            </ul>
+          </div>
+        </div>
         <div class="col-lg-3 d-lg-block d-md-none d-sm-none " style="z-index: 1;">
           <div class="downItems ">
-
             <div class="select-btn show" id="annual-salary">
-
               <span class="btn-text">annual salary</span>
               <span class="arrow-dwn">
-
                 <i class="fa-solid fa-chevron-down"></i>
               </span>
             </div>
             <ul class="list-items">
               <!--slicer-->
               <input type="range" class="form-range" min="0" max="5" id="customRange2" style="width: 100%;">
-            </ul>
-
-          </div>
-        </div>
-        <div class="col-lg-2 d-lg-block d-md-none d-sm-none" style="z-index: 1;">
-          <div class="downItems ">
-            <div class="select-btn" id="dayrate">
-              <span class="btn-text">Experience</span>
-              <span class="arrow-dwn">
-                <i class="fa-solid fa-chevron-down"></i>
-              </span>
-            </div>
-            <ul class="list-items">
-              <li class="item">
-                <span class="checkbox">
-                  <i class="fa-solid fa-check check-icon"></i>
-                </span>
-                <span class="item-text">Internship | alternant</span>
-              </li>
-              <li class="item">
-                <span class="checkbox">
-                  <i class="fa-solid fa-check check-icon"></i>
-                </span>
-                <span class="item-text">First Job</span>
-              </li>
-              <li class="item">
-                <span class="checkbox">
-                  <i class="fa-solid fa-check check-icon"></i>
-                </span>
-                <span class="item-text">Manager</span>
-              </li>
-              <li class="item">
-                <span class="checkbox">
-                  <i class="fa-solid fa-check check-icon"></i>
-                </span>
-                <span class="item-text">Director</span>
-              </li>
-              <li class="row d-flex justify-content-end flex-row" style="border-top: 1px solid #D9D9D9;">
-                <button type="button" class="filter-btn-result col-8 btn ml-2 mt-2" id="Exper-btn">show result</button>
-              </li>
             </ul>
           </div>
         </div>
@@ -463,7 +436,8 @@
       </div>
     </div>
   </div>
-  </form>
+   </div>
+  
 
 
   <!--end-filters -->
