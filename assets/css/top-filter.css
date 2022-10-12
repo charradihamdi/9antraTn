@@ -281,11 +281,11 @@ body {
   
 
 }
-/* .btn-text .spanSelected{
-  font-size: 12px;
+.btn-text .spanSelected{
+  font-size: 8px;
   background: #C4C4C4;
   width: max-content;
   border:1px solid #C4C4C4 ;
   border-radius: 14px;
 
-} */
+}

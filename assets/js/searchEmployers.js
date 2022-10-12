@@ -28,7 +28,6 @@ const filters = {
 
 const getFilters = (id, item) => {
   filters[id].items.push(item);
-
   // manupulation DOM
   // get ID
   // change innerHTML
@@ -38,17 +37,32 @@ function submitHandler(event) {
   event.preventDefault();
 
   // get Inputs values
-  let jobOffer = document.querySelector('input[name="jobOffer"]:checked').value;
-  let Skills = document.querySelector('input[name="Skills"]:checked');
-  let jobType=document.querySelector('input[name="jobType"]:checked').value;
-  skill = ['Iphone & Android','Java & Ajax']    
-      const btnspan = document.querySelector('#jobsOffers .btn-text')
-      btnspan.innerHTML=""
-      const span = document.createElement('span')
-      span.style=" font-size: 14px;background: #C4C4C4;width: max-content;border:1px solid #C4C4C4 ;border-radius: 14px;margin-left:6px"
-      span.innerHTML=jobOffer ;
-      btnspan.appendChild(span)
+  let jobOfferElement = document.querySelector('input[name="jobOffer"]:checked');
+  let SkillsElement = document.querySelectorAll('input[name="Skills"]:checked');
+  let jobTypeElement =document.querySelectorAll('input[name="jobType"]:checked');
+  let ExperienceElement =document.querySelectorAll('input[name="experience"]:checked');
   // Build body request
+ 
+  if(jobOfferElement.value){
+    document.querySelector('#jobsOffers .btn-text').innerHTML=jobOfferElement.value
+   document.querySelector('#jobsOffers .select-btn').style='background: #01B753;'
+   document.querySelector('#jobsOffers .btn-text').style='color:white'
+  }
+  if(SkillsElement.length>0){
+    document.querySelector('#Skills .select-btn').style='background: #01B753;'
+    document.querySelector('#Skills .btn-text').innerHTML=`Skills(${SkillsElement.length})`
+    document.querySelector('#Skills .btn-text').style='color:white'
+  }
+  if(jobTypeElement.length>0){
+    document.querySelector('#typeOfJob .select-btn').style='background: #01B753;'
+    document.querySelector('#typeOfJob .btn-text').innerHTML=`Skills(${jobTypeElement.length})`
+    document.querySelector('#typeOfJob .btn-text').style='color:white'
+  }
+  if(ExperienceElement.length>0){
+    document.querySelector('#Experience .select-btn').style='background: #01B753;'
+    document.querySelector('#Experience .btn-text').innerHTML=`Skills(${ExperienceElement.length})`
+    document.querySelector('#Experience .btn-text').style='color:white'
+  }
   debugger;
 }
 
@@ -59,29 +73,9 @@ selectBtn.forEach((item) =>
   })
 );
 
-//skills filter
-Skills = document.querySelectorAll("#Skills .item");
 
-Skills.forEach((item) => {
-  item.addEventListener("click", (event) => {
-    let checked = document.querySelectorAll("#SkillsList .item .checked"),
-      btnText = document.querySelector("#Skills .btn-text");
- 
-  });
-});
 //Telétravail filter
-typeOfJob = document.querySelectorAll("#typeOfJob .item");
 
-typeOfJob.forEach((item) => {
-  item.addEventListener("click", (event) => {
-    item.classList.toggle("checked");
-
-    let checked = document.querySelectorAll(".item .checked"),
-      btnText = document.querySelector("#typeOfJob .btn-text");
-   
-  
-  });
-});
 //Telétravail filter
 typeOfJob = document.querySelectorAll("#typeOfJob .item");
 
