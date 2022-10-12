@@ -269,3 +269,23 @@ body {
   border-radius: 20px;
   
 } */
+#lSpan span{
+  color: #2D5CA2;
+  text-align: center;
+  margin-left: 20px;
+  display: flex;
+  align-self: center;
+  border: 0px solid red;
+  width: 600px;
+  right: 0;
+  
+
+}
+/* .btn-text .spanSelected{
+  font-size: 12px;
+  background: #C4C4C4;
+  width: max-content;
+  border:1px solid #C4C4C4 ;
+  border-radius: 14px;
+
+} */
