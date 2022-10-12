@@ -1,22 +1,38 @@
 const jobs = {
-  companies: {Keyrus:24000,SAGEMCOM:260,goDev:14000},
-  Experience: ["Internship | alternant","First Job"],
-  AnnualSalary: [15000,10000,5000,3000],
-  size: "10-50",
+  categories: [
+  {
+    All: 'All',
+    result: 25000
+  }, {
+    emploie: "Emplois",
+    result: 10000
+  }, {
+    Entreprise: 'Entrepries',
+    result: 3000
+  }, {
+    poste: 'Poste',
+    result: 20
+  }],
+  companies: [{
+    Keyrus: 24000
+  }, {
+    SAGEMCOM: 260
+  }, {
+    goDev: 14000
+  }
+],
+  Experience: ["Internship | alternant", "First Job"],
+  AnnualSalary: [15000, 10000, 5000, 3000],
   jobs: [
-    {
-      title:'All'
-    },
     {
       position: "Software Engineer",
       title: "Backend Developer",
-      description:
-        "You will help us build API for our compression infrastructure.",
+      description: "You will help us build API for our compression infrastructure.",
       url: "http://piedpiper.com/jobs/backend-developer",
       type: "full-time",
       posted: "2015-01-20",
       location: "US",
-      skills: ["Python", "Javascript", "Redis","React js","HTML / CSS"],
+      skills: ["Python", "Javascript", "Redis", "React js", "HTML / CSS"],
       salaryRange: {
         from: 90000,
         to: 100000,
@@ -28,13 +44,12 @@ const jobs = {
       },
       perks: ["free food", "gym membership"],
       apply: "http://piedpiper.com/jobs/backend-developer/apply",
-      offers:22
+      offers: 22
     },
     {
       position: "Software Engineer",
       title: "Frontend Developer",
-      description:
-        "You will help us build dashboard for our compression infrastructure.",
+      description: "You will help us build dashboard for our compression infrastructure.",
       url: "http://piedpiper.com/jobs/frontend-developer",
       type: "full-time",
       posted: "2015-01-20",
@@ -49,16 +64,11 @@ const jobs = {
         from: 0.005,
         to: 0.01,
       },
-      perks: ["free food", "gym membership"],
-      apply: "http://piedpiper.com/jobs/frontend-developer/apply",
-      offers:150,
+      offers: 150,
     },
     {
       position: "UI/UX Designer",
       title: "UX Designer",
-      description:
-        "You will help us design dashboard for our compression infrastructure.",
-      url: "http://piedpiper.com/jobs/ux-designer",
       type: "full-time",
       posted: "2015-01-20",
       location: "US",
@@ -74,7 +84,7 @@ const jobs = {
       },
       perks: ["free food", "gym membership"],
       apply: "http://piedpiper.com/jobs/ux-designer/apply",
-      offers:1000,
+      offers: 1000,
     },
   ],
 };
@@ -100,19 +110,32 @@ selectBtn.forEach((item) =>
   })
 );
 
-items.forEach((item) => {
-  item.addEventListener("click", () => {
+items.forEach((item, i) => {
+  item.addEventListener("click", (event) => {
+    debugger
     item.classList.toggle("checked");
 
-    let checked = document.querySelectorAll(".checked"),
+    let checked = document.querySelectorAll(".item .checked"),
       btnText = document.querySelector(".btn-text");
     checkbox = document.querySelectorAll(".checkbox li");
 
-    // if(checked && checked.length > 0 && selectBtn){
+    console.log(checked)
+    //  if(checked && checked.length > 0 && selectBtn){
     //     btnText.innerText = `${checked.length} Selected`;
-    // }else{
-    //     btnText.innerText = "Select categories";
-    // }
+    //  }else{
+    //      btnText.innerText = "Select categories";
+    //  }
+    jobselected = item.querySelector('.item-text')
+
+    jobs.categories.forEach((job) => {
+      if (jobselected.innerText == job.All || jobselected.innerText == job.emploie || jobselected.innerText == job.Entreprise || jobselected.innerText == job.poste) {
+        console.log(true)
+        document.querySelector('#Category-btn').innerText = `result ${job.result}`
+
+      }
+    })
+
+
   });
 });
 
@@ -132,32 +155,31 @@ $(document).ready(function () {
   });
 });
 
-jobs.jobs.forEach((job) => {
-  var li = document.createElement("li");
-  li.className = "item";
-  li.appendChild(document.createTextNode(job.title));
-  listDynamicItems.appendChild(li);
-});
+// jobs.jobs.forEach((job) => {
+//   var li = document.createElement("li");
+//   li.className = "item";
+//   li.appendChild(document.createTextNode(job.title));
+//   listDynamicItems.appendChild(li);
+// });
+
 jobsTitle = document.querySelectorAll("#listDynamicItems .item");
 jobsTitle.forEach((item) => {
   item.addEventListener("click", () => {
- 
+
     jobs.jobs.forEach((job) => {
-    
-      for(let j=0;j<job.skills.length;j++){
-      
-      for (let i = 0; i < itemtext.length; i++) {
-          if(itemtext[i].innerText == job.skills[j]) {
- 
-            console.log(i,j)
-            itemtext[i].style='padding-left: 1rem;background:#C2E7FF;border:0px solid black;width:100%;border-radius: 20px;'
-            items[i].classList.toggle('checked')=true
+
+      for (let j = 0; j < job.skills.length; j++) {
+        for (let i = 0; i < itemtext.length; i++) {
+          if (itemtext[i].innerText == job.skills[j]) {
+            console.log(i, j)
+            itemtext[i].style = 'padding-left: 1rem;background:#C2E7FF;border:0px solid black;width:100%;border-radius: 20px;'
+            items[i].classList.toggle('checked') = true
           }
-          
+
         }
-      
+
       }
-   
+
     });
   });
 });

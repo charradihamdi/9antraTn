@@ -249,49 +249,65 @@
 
   <!--topfilteer-->
   <div class="container">
-    
-    <div class="topfilter row">
-      
 
+    <form class="topfilter row" onsubmit="">
       <div class="col col-lg-3 col-sm-12" style="z-index: 7;">
-        <div class="downItems ">
+        <div class="downItems" id="jobsOffers" name="jobsOffers">
           <div class="select-btn">
-            <span class="btn-text">Emploie Offers </span>
+            <span class="btn-text">Jobs Offers </span>
             <span class="arrow-dwn">
               <i class="fa-solid fa-chevron-down"></i>
             </span>
           </div>
-          <ul class="list-items" id="listDynamicItems">
+          <ul class="list-items no-ul-list filter-list" id="listDynamicItems">
             <input placeholder="search" />
-            <!-- <li class="item">
-              <span class="item-text">Front end developer</span>
-            </li> -->
-         
+            <li class="item form-group">
+              <label for="a1" class="item-text checkbox-custom-label">All </label>
+            </li>
+            <li class="item">
+              <label for="a2" class="item-text checkbox-custom-label">Financial Service </label>
+            </li>
+            <li class="item">
+
+              <label for="a3" class="item-text checkbox-custom-label">Art, Design, Media</label>
+            </li>
+            <li class="item">
+
+              <label for="a4" class="item-text checkbox-custom-label">Coach & Education </label>
+            </li>
+            <li class="item">
+
+              <label for="a5" class="item-text checkbox-custom-label">Apps Developements </label>
+              <ul class="no-ul-list filter-list">
+          
+              </ul>
+            </li >
+            <li class="item">
+              <label for="a6" class="item-text checkbox-custom-label">Writing & Translation </label>
+            </li>
+
           </ul>
-      
+
+
         </div>
       </div>
 
       <div class=" col-lg-9 col-md-12 col-sm-12 ">
         <div class="row " style="align-items: baseline;" id="inputsTopFilter">
-
           <div class="col-lg-5 col-md-4 col-sm-4 mt-3  d-lg-block">
             <input type="text" class="form-control" style="border: 0;" placeholder="Job title" />
           </div>
-
           <div class=" col-lg-5 col-md-7  col-sm-7 mt-3 d-lg-block">
             <input type="text" class="form-control" placeholder="Localisation  |  postal code" style="border: 0;" />
           </div>
-
           <div class="col-sm-1  col-md-1  mt-3  d-lg-flex">
             <div class="search-icon">
-              <!-- <button class="btn-outline-primary search-btn">Search</button> -->
               <i class="fa-solid fa-magnifying-glass"></i>
             </div>
           </div>
         </div>
       </div>
-      
+
     </div>
 
   </div>
@@ -299,60 +315,51 @@
 
   <!--filters -->
 
-  <div class="topSecondfilter " style="margin-top: 0;">
-    <div class="container mt-2">
+  <form style="margin-top: 0;" onsubmit="">
+    <div class="topSecondfilter"> 
+    <div class=" container mt-2">
       <div class="row d-flex justify-content-center">
         <div class="col col-lg-2 col-sm-4" style="z-index: 1;">
-          <div class="downItems ">
+          <div class="downItems " name="Skills" id="Skills">
             <div class="select-btn" id="emploie">
-              <span class="btn-text text-center">Categories</span>
+              <span class="btn-text text-center">Skills</span>
               <span class="arrow-dwn">
                 <i class="fa-solid fa-chevron-down "></i>
               </span>
             </div>
-            <ul class="list-items">
-
+            <ul class="list-items no-ul-list filter-list"> 
               <li class="item">
-                <span class="checkbox">
-                  <i class="fa-solid fa-check check-icon"></i>
-                </span>
-
-                <span class="item-text">All</span>
+                <input id="c2" class="checkbox-custom" name="Parking" type="checkbox" />
+                <label for="c2" class="checkbox-custom-label">iPhone & Android </label>
               </li>
               <li class="item">
-                <span class="checkbox">
-                  <i class="fa-solid fa-check check-icon"></i>
-                </span>
-
-                <span class="item-text">Emplois</span>
+                <input id="c3" class="checkbox-custom" name="Coffee" type="checkbox" />
+                <label for="c3" class="checkbox-custom-label">Java & AJAX</label>
               </li>
               <li class="item">
-                <span class="checkbox">
-                  <i class="fa-solid fa-check check-icon"></i>
-                </span>
-
-                <span class="item-text">Entrepries</span>
+                <input id="c4" class="checkbox-custom" name="Mother" type="checkbox" />
+                <label for="c4" class="checkbox-custom-label">Account Manager </label>
               </li>
               <li class="item">
-                <span class="checkbox">
-                  <i class="fa-solid fa-check check-icon"></i>
-                </span>
-
-                <span class="item-text">Poste</span>
+                <input id="c5" class="checkbox-custom" name="Outdoor" type="checkbox" />
+                <label for="c5" class="checkbox-custom-label">WordPress </label>
+              </li>
+              <li class="item">
+                <input id="c6" class="checkbox-custom" name="Pet" type="checkbox" />
+                <label for="c6" class="checkbox-custom-label">Magento </label>
               </li>
               <li class="row d-flex justify-content-end flex-row" style="border-top: 1px solid #D9D9D9;">
-
-                <button type="button" class="filter-btn-result col-8 btn ml-2 mt-2">show result</button>
+                <button type="button" class="filter-btn-result col-8 btn ml-2 mt-2" id="Exper-btn">show result</button>
               </li>
             </ul>
           </div>
         </div>
 
         <!--2 eme filtr-->
-        <div class="col-lg-2 col-sm-4" style="z-index: 1;">
+        <div class="col-lg-3 col-sm-4" style="z-index: 1;">
           <div class="downItems ">
             <div class="select-btn" id="teletravail">
-              <span class="btn-text" >Telétravail</span>
+              <span class="btn-text">onSite/Hybride</span>
               <span class="arrow-dwn">
                 <i class="fa-solid fa-chevron-down"></i>
               </span>
@@ -364,7 +371,7 @@
                   <i class="fa-solid fa-check check-icon"></i>
                 </span>
 
-                <span class="item-text">on site</span>
+                <span class="item-text">On Site</span>
               </li>
               <li class="item">
                 <span class="checkbox">
@@ -378,7 +385,7 @@
                   <i class="fa-solid fa-check check-icon"></i>
                 </span>
 
-                <span class="item-text">On Site</span>
+                <span class="item-text">a distance</span>
               </li>
               <li class="row d-flex justify-content-end flex-row" style="border-top: 1px solid #D9D9D9;">
 
@@ -387,8 +394,8 @@
             </ul>
           </div>
         </div>
-        
-        <div class="col-lg-2 d-lg-block d-md-none d-sm-none " style="z-index: 1;" >
+
+        <div class="col-lg-3 d-lg-block d-md-none d-sm-none " style="z-index: 1;">
           <div class="downItems ">
 
             <div class="select-btn show" id="annual-salary">
@@ -401,81 +408,12 @@
             </div>
             <ul class="list-items">
               <!--slicer-->
-              <input type="range" class="form-range" min="0" max="5" id="customRange2">
-              <li class="item">
-                <span class="checkbox">
-                  <i class="fa-solid fa-check check-icon"></i>
-                </span>
-                <span class="item-text">15000$</span>
-              </li>
-              <li class="item">
-
-                <span class="checkbox">
-                  <i class="fa-solid fa-check check-icon"></i>
-                </span>
-
-                <span class="item-text">10000$</span>
-              </li>
-              <li class="item">
-
-                <span class="checkbox">
-                  <i class="fa-solid fa-check check-icon"></i>
-                </span>
-
-                <span class="item-text">5000$</span>
-              </li>
-              <li class="item">
-
-                <span class="checkbox">
-                  <i class="fa-solid fa-check check-icon"></i>
-                </span>
-
-                <span class="item-text">3000$</span>
-              </li>
-              <li class="row d-flex justify-content-end flex-row" style="border-top: 1px solid #D9D9D9;">
-
-                <button type="button" class="filter-btn-result col-8 btn ml-2 mt-2">show result</button>
-              </li>
+              <input type="range" class="form-range" min="0" max="5" id="customRange2" style="width: 100%;">
             </ul>
 
           </div>
         </div>
         <div class="col-lg-2 d-lg-block d-md-none d-sm-none" style="z-index: 1;">
-          <div class="downItems ">
-            <div class="select-btn" id="compte">
-              <span class="btn-text">company</span>
-              <span class="arrow-dwn">
-                <i class="fa-solid fa-chevron-down"></i>
-              </span>
-            </div>
-            <ul class="list-items">
-              <input placeholder="search" />
-              <li class="item">
-                <span class="checkbox">
-                  <i class="fa-solid fa-check check-icon"></i>
-                </span>
-                <span class="item-text">keyrus</span>
-              </li>
-
-              <li class="item">
-                <span class="checkbox">
-                  <i class="fa-solid fa-check check-icon"></i>
-                </span>
-                <span class="item-text">SAGEMCOM</span>
-              </li>
-              <li class="item">
-                <span class="checkbox">
-                  <i class="fa-solid fa-check check-icon"></i>
-                </span>
-                <span class="item-text">goDev</span>
-              </li>
-              <li class="row d-flex justify-content-end flex-row" style="border-top: 1px solid #D9D9D9;">
-                <button type="button" class="filter-btn-result col-8 btn ml-2 mt-2">show result</button>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-2 d-lg-block d-md-none d-sm-none" style="z-index: 0;">
           <div class="downItems ">
             <div class="select-btn" id="dayrate">
               <span class="btn-text">Experience</span>
@@ -508,7 +446,9 @@
                 </span>
                 <span class="item-text">Director</span>
               </li>
-
+              <li class="row d-flex justify-content-end flex-row" style="border-top: 1px solid #D9D9D9;">
+                <button type="button" class="filter-btn-result col-8 btn ml-2 mt-2" id="Exper-btn">show result</button>
+              </li>
             </ul>
           </div>
         </div>
@@ -519,10 +459,11 @@
             </div>
           </div>
         </div>
-      
+
       </div>
     </div>
   </div>
+  </form>
 
 
   <!--end-filters -->
