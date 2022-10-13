@@ -65,7 +65,7 @@ function submitHandler(event) {
     document.querySelector('#typeOfJob .btn-text').innerHTML=`typeOfJob(${jobTypeElement.length})`
     document.querySelector('#typeOfJob .btn-text').style='color:white'
   }else{
-    document.querySelector('#typeOfJob .btn-text').innerHTML=`Skills`
+    document.querySelector('#typeOfJob .btn-text').innerHTML=`type Of Job`
     document.querySelector('#typeOfJob .select-btn').style='background: #ffffff;'
     document.querySelector('#typeOfJob .btn-text').style='color:black'
   }
