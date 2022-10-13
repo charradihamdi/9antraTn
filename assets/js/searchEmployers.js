@@ -1,5 +1,6 @@
 
 //variable declaration
+var jobs = ['front end developer','back end developer','.net developer','full stack java ',"HR"]
 const selectBtn = document.querySelectorAll(".select-btn");
 items = document.querySelectorAll(".item");
 listDynamicItems = document.getElementById("listDynamicItems");
@@ -65,7 +66,7 @@ function submitHandler(event) {
     document.querySelector('#typeOfJob .btn-text').innerHTML=`typeOfJob(${jobTypeElement.length})`
     document.querySelector('#typeOfJob .btn-text').style='color:white'
   }else{
-    document.querySelector('#typeOfJob .btn-text').innerHTML=`type Of Job`
+    document.querySelector('#typeOfJob .btn-text').innerHTML=`Job Type`
     document.querySelector('#typeOfJob .select-btn').style='background: #ffffff;'
     document.querySelector('#typeOfJob .btn-text').style='color:black'
   }
@@ -167,3 +168,41 @@ listItems.forEach((item,i)=>{
   }
 })
 }
+
+//***Experience-input */
+document.getElementById('Experience-input').addEventListener('input',filtersSkills)
+
+function filtersSkills(){ 
+  const searchInput =  document.getElementById('Experience-input')
+  
+  const filter = searchInput.value.toLowerCase()
+  const listItems = document.querySelectorAll('#Experience .item .checkbox-custom')
+  const list = document.querySelectorAll('#Experience .item ')
+  
+  listItems.forEach((item,i)=>{
+    let text = item.value
+    if(text.toLowerCase().includes(filter.toLowerCase())){
+      list[i].style.display=''
+    }else{
+      list[i].style.display='none'
+    }
+  })
+  }
+
+  //***toSearch */
+  document.getElementById('topSearch').addEventListener('input',filtersSkills)
+  function filtersSkills(){ 
+    const searchInput =  document.getElementById('topSearch')
+    
+    const filter = searchInput.value.toLowerCase()
+   
+    
+    jobs.forEach((item,i)=>{
+      let text = item.value
+      if(text.toLowerCase().includes(filter.toLowerCase())){
+        document.getElementById('topSearch').value=text
+      }else{
+        document.getElementById('topSearch').value=''
+      }
+    })
+    }
