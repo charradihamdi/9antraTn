@@ -74,7 +74,7 @@ function submitHandler(event) {
     document.querySelector('#Experience .btn-text').innerHTML=`Experience(${ExperienceElement.length})`
     document.querySelector('#Experience .btn-text').style='color:white'
   }else{
-    document.querySelector('#Experience .btn-text').innerHTML=`Skills`
+    document.querySelector('#Experience .btn-text').innerHTML=`Experience`
     document.querySelector('#Experience .select-btn').style='background: #ffffff;'
     document.querySelector('#Experience .btn-text').style='color:black'
     
