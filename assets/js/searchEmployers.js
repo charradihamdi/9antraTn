@@ -47,21 +47,37 @@ function submitHandler(event) {
     document.querySelector('#jobsOffers .btn-text').innerHTML=jobOfferElement.value
    document.querySelector('#jobsOffers .select-btn').style='background: #01B753;'
    document.querySelector('#jobsOffers .btn-text').style='color:white'
+  }else{
+    document.querySelector('#jobsOffers .btn-text').innerHTML=''
+
   }
   if(SkillsElement.length>0){
     document.querySelector('#Skills .select-btn').style='background: #01B753;'
     document.querySelector('#Skills .btn-text').innerHTML=`Skills(${SkillsElement.length})`
     document.querySelector('#Skills .btn-text').style='color:white'
+  }else{
+    document.querySelector('#Skills .btn-text').innerHTML=`Skills`
+    document.querySelector('#Skills .select-btn').style='background: #fffff;'
+    document.querySelector('#Skills .btn-text').style='color:black'
   }
   if(jobTypeElement.length>0){
     document.querySelector('#typeOfJob .select-btn').style='background: #01B753;'
-    document.querySelector('#typeOfJob .btn-text').innerHTML=`Skills(${jobTypeElement.length})`
+    document.querySelector('#typeOfJob .btn-text').innerHTML=`typeOfJob(${jobTypeElement.length})`
     document.querySelector('#typeOfJob .btn-text').style='color:white'
+  }else{
+    document.querySelector('#typeOfJob .btn-text').innerHTML=`Skills`
+    document.querySelector('#typeOfJob .select-btn').style='background: #ffffff;'
+    document.querySelector('#typeOfJob .btn-text').style='color:black'
   }
   if(ExperienceElement.length>0){
     document.querySelector('#Experience .select-btn').style='background: #01B753;'
-    document.querySelector('#Experience .btn-text').innerHTML=`Skills(${ExperienceElement.length})`
+    document.querySelector('#Experience .btn-text').innerHTML=`Experience(${ExperienceElement.length})`
     document.querySelector('#Experience .btn-text').style='color:white'
+  }else{
+    document.querySelector('#Experience .btn-text').innerHTML=`Skills`
+    document.querySelector('#Experience .select-btn').style='background: #ffffff;'
+    document.querySelector('#Experience .btn-text').style='color:black'
+    
   }
   // debugger;
 }
