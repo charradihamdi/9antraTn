@@ -187,3 +187,23 @@ listItems.forEach((item,i)=>{
 })
 }
 
+//***jobs-offer */
+const jobInput = document.getElementById('jobInput')
+jobInput.addEventListener('input',filtersSkills)
+
+function filtersSkills(){ 
+const searchInput =  document.getElementById('jobInput')
+
+const filter = searchInput.value.toLowerCase()
+const listItems = document.querySelectorAll('#jobsOffers .item .radio-custom')
+const list = document.querySelectorAll('#jobsOffers .item ')
+
+listItems.forEach((item,i)=>{
+  let text = item.value
+  if(text.toLowerCase().includes(filter.toLowerCase())){
+    list[i].style.display=''
+  }else{
+    list[i].style.display='none'
+  }
+})
+}
