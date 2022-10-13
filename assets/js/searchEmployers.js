@@ -144,3 +144,26 @@ listItems.forEach((item,i)=>{
   }
 })
 }
+
+
+
+//****filter for job type */
+
+document.getElementById('searchJobType').addEventListener('input',filtersSkills)
+
+function filtersSkills(){ 
+const searchInput =  document.getElementById('searchJobType')
+
+const filter = searchInput.value.toLowerCase()
+const listItems = document.querySelectorAll('#typeOfJob .item .checkbox-custom')
+const list = document.querySelectorAll('#typeOfJob .item ')
+
+listItems.forEach((item,i)=>{
+  let text = item.value
+  if(text.toLowerCase().includes(filter.toLowerCase())){
+    list[i].style.display=''
+  }else{
+    list[i].style.display='none'
+  }
+})
+}
