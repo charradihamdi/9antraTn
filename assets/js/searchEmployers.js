@@ -42,7 +42,7 @@ function submitHandler(event) {
   let jobTypeElement =document.querySelectorAll('input[name="jobType"]:checked');
   let ExperienceElement =document.querySelectorAll('input[name="experience"]:checked');
   // Build body request
- 
+
   if(jobOfferElement.value){
     document.querySelector('#jobsOffers .btn-text').innerHTML=jobOfferElement.value
    document.querySelector('#jobsOffers .select-btn').style='background: #01B753;'
@@ -63,7 +63,7 @@ function submitHandler(event) {
     document.querySelector('#Experience .btn-text').innerHTML=`Skills(${ExperienceElement.length})`
     document.querySelector('#Experience .btn-text').style='color:white'
   }
-  debugger;
+  // debugger;
 }
 
 selectBtn.forEach((item) =>
@@ -104,3 +104,27 @@ $(document).ready(function () {
     $(".menu-btn").removeClass("disable");
   });
 });
+
+
+document.getElementById('searchskills').addEventListener('input',filtersSkills)
+
+function filtersSkills(){ 
+const searchInput =  document.getElementById('searchskills')
+
+const filter = searchInput.value.toLowerCase()
+const listItems = document.querySelectorAll('#Skills .item .checkbox-custom')
+const list = document.querySelectorAll('#Skills .item ')
+
+listItems.forEach((item,i)=>{
+  let text = item.value
+  //console.log(text.toLowerCase().includes(filter.toLowerCase()))
+  if(text.toLowerCase().includes(filter.toLowerCase())){
+    list[i].style.display=''
+    // item.checked=true
+  }else{
+    list[i].style.display='none'
+    // item.checked=false
+   
+  }
+})
+}
