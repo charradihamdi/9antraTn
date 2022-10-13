@@ -43,12 +43,12 @@ function submitHandler(event) {
   let ExperienceElement =document.querySelectorAll('input[name="experience"]:checked');
   // Build body request
 
-  if(jobOfferElement.value){
+  if(jobOfferElement){
     document.querySelector('#jobsOffers .btn-text').innerHTML=jobOfferElement.value
    document.querySelector('#jobsOffers .select-btn').style='background: #01B753;'
    document.querySelector('#jobsOffers .btn-text').style='color:white'
   }else{
-    document.querySelector('#jobsOffers .btn-text').innerHTML=''
+    document.querySelector('#jobsOffers .btn-text').innerHTML='Jobs Offers'
 
   }
   if(SkillsElement.length>0){
