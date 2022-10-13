@@ -65,7 +65,7 @@ function submitHandler(event) {
     document.querySelector('#typeOfJob .btn-text').innerHTML=`typeOfJob(${jobTypeElement.length})`
     document.querySelector('#typeOfJob .btn-text').style='color:white'
   }else{
-    document.querySelector('#typeOfJob .btn-text').innerHTML=`type Of Job`
+    document.querySelector('#typeOfJob .btn-text').innerHTML=`Job Type`
     document.querySelector('#typeOfJob .select-btn').style='background: #ffffff;'
     document.querySelector('#typeOfJob .btn-text').style='color:black'
   }
@@ -136,8 +136,10 @@ listItems.forEach((item,i)=>{
   let text = item.value
   if(text.toLowerCase().includes(filter.toLowerCase())){
     list[i].style.display=''
+   
   }else{
     list[i].style.display='none'
+    // item.checked=false
   }
 })
 }
