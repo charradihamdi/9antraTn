@@ -146,35 +146,14 @@ listItems.forEach((item,i)=>{
 
 
 
-//****filter for job type */
-
-const job =document.getElementById('searchJobType')
-job.addEventListener('input',filtersSkills1)
-function filtersSkills1(){ 
-const searchInput =  document.getElementById('searchJobType')
-
-const filter = searchInput.value.toLowerCase()
-const listItems = document.querySelectorAll('#typeOfJob .item .checkbox-custom')
-const list = document.querySelectorAll('#typeOfJob .item ')
-
-listItems.forEach((item,i)=>{
-  let text = item.value
-  if(text.toLowerCase().includes(filter.toLowerCase())){
-    list[i].style.display=''
-  }else{
-    list[i].style.display='none'
-  }
-})
-}
-
 
 //***Experience-input */
 const Experience = document.getElementById('input-experience')
-Experience.addEventListener('input',filtersSkills)
+Experience.addEventListener('input',filtersSkills4)
 
-function filtersSkills(){ 
+function filtersSkills4(){ 
 const searchInput =  document.getElementById('input-experience')
-
+console.log(searchInput)
 const filter = searchInput.value.toLowerCase()
 const listItems = document.querySelectorAll('#Experience .item .checkbox-custom')
 const list = document.querySelectorAll('#Experience .item ')
