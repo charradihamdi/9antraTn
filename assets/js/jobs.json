@@ -1,51 +1,46 @@
 {
-  "company": "Pied Piper",
-  "url": "http://piedpiper.com/",
-  "remoteFriendly": true,
-  "market": "SaaS",
-  "size": "10-50",
   "jobs": [
     {
-      "position": "Apps Developements",
-      "title": "Apps Developements",
-      "description": "You will help us build API for our compression infrastructure.",
-      "type": "Hybride",
-      "skills": ["iPhone & Android", "Java & AJAX","WordPress"],
-      "TypeOfJob": ["OnSite","Hybride"],
-      "annualSalary": {
-        "from": 90000,
-        "to": 100000,
-        "currency": "USD"
-      },
-      "offers":22
-    },
-    {
-      "position": "Writing & Translation",
-      "title": "Writing & Translation",
-      "description": "You will help us build API for our compression infrastructure.",
-      "type": "OnSite",
-      "skills": ["Magento"],
-      "TypeOfJob": ["OnSite","Hybride"],
-      "annualSalary": {
-        "from": 90000,
-        "to": 100000,
-        "currency": "USD"
-      },
-      "offers":22
-    },
-    {
-      "position": "Financial Service ",
-      "title": "Financial Service ",
+      "position": "Financial Service",
+      "title": "Financial Service",
       "description": "You will help us build API for our compression infrastructure.",
       "type": "Hybride",
       "skills": ["Account Manager"],
+      "TypeOfJob": ["OnSite","Hybride"],
+      "annualSalary": {
+        "from": 90000,
+        "to": 100000,
+        "currency": "USD"
+      },
+      "Experience":"First Job"
+    },
+    {
+      "position": "Apps Developpements",
+      "title": "Apps Developpements",
+      "description": "You will help us build API for our compression infrastructure.",
+      "type": "OnSite",
+      "skills": ["java & ajax"],
+      "TypeOfJob": ["OnSite","Hybride"],
+      "annualSalary": {
+        "from": 90000,
+        "to": 100000,
+        "currency": "USD"
+      },
+      "Experience":"internship alternant"
+    },
+    {
+      "position": "Art,DesignnMedia",
+      "title": "Art,DesignnMedia",
+      "description": "You will help us build API for our compression infrastructure.",
+      "type": "Hybride",
+      "skills": ["Iphone & Android"],
       "TypeOfJob": ["OnSite","Hybride"],
       "annualSalary": {
         "from": 4000,
         "to": 10000,
         "currency": "USD"
       },
-      "offers":150
+      "Experience":"first job"
     }
   ]
 }

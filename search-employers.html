@@ -4,11 +4,11 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/all.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" media="mediatype and|not|only (expressions)" href="print.css">
+  <link src="https://fonts.googleapis.com/css?family=Poppins:300,400,500" rel="stylesheet" />
+  <link src="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" src="./assets/css/all.min.css">
+  <link rel="stylesheet" src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" media="mediatype and|not|only (expressions)" src="print.css">
   <title>Workoo - Freelancing HTML Template</title>
 
   <!-- All Plugins Css -->
@@ -251,137 +251,135 @@
   <div class="container">
 
     <form class="topfilter row" onsubmit="submitHandler(event)">
-      <div class="col col-lg-3 col-sm-12" style="z-index: 7;">
-        <div class="downItems" id="jobsOffers" name="jobsOffers">
-          <div class="select-btn">
-            <span class="btn-text">Jobs Offers  </span>
-            <span class="arrow-dwn">
-              <i class="fa-solid fa-chevron-down"></i>
-            </span>
-          </div>
-          <ul class="list-items no-ul-list filter-list" id="listDynamicItems">
-            <input placeholder="search" id="jobInput"/>
-            <li class="item form-group">
-              <input id="e1" class="radio-custom" name="jobOffer" type="radio" value="All">
-              <label for="e1" class="radio-custom-label">All</label>
-            </li>
-            <li class="item form-group">
-              <input id="e2" class="radio-custom" name="jobOffer" type="radio" value="Financial Service">
-              <label for="e2" class="radio-custom-label">Financial Service</label>
-            </li>
-            <li class="item form-group">
-              <input id="e3" class="radio-custom" name="jobOffer" type="radio" value="Art, Design, Media">
-              <label for="e3" class="radio-custom-label">Art, Design, Media</label>
-            </li>
-            <li class="item form-group">
-              <input id="e4" class="radio-custom" name="jobOffer" type="radio" value="Coach & Education">
-              <label for="e4" class="radio-custom-label">Coach & Education </label>
-            </li>
-            <li class="item form-group">
-              <input id="e5" class="radio-custom" name="jobOffer" type="radio" value="Apps Developements">
-              <label for="e5" class="radio-custom-label">Apps Developements  </label>
-            </li>
-          </ul>
-
-        </div>
-      </div>
-
-      <div class=" col-lg-9 col-md-12 col-sm-12 ">
+      <div class=" col-lg-12 col-md-12 col-sm-12 ">
         <div class="row " style="align-items: baseline;" id="inputsTopFilter">
           <div class="col-lg-5 col-md-4 col-sm-4 mt-3  d-lg-block">
             <input type="text" class="form-control" style="border: 0;" placeholder="Job title" />
           </div>
-          <div class=" col-lg-5 col-md-7  col-sm-7 mt-3 d-lg-block">
+          <div class=" col-lg-6 col-md-7  col-sm-7 mt-3 d-lg-block">
             <input type="text" class="form-control" placeholder="Localisation  |  postal code" style="border: 0;" />
           </div>
           <div class="col-sm-1  col-md-1  mt-3  d-lg-flex">
             <button type="submit" class="search-icon">
-                <i class="fa-solid fa-magnifying-glass"></i>
+              <i class="fa-solid fa-magnifying-glass"></i>
             </button>
           </div>
         </div>
       </div>
 
-   
+
 
   </div>
 
 
   <!--filters -->
-    <div class="topSecondfilter"> 
-    <div class=" container mt-2">
-      <div class="row d-flex justify-content-center">
-        <div class="col col-lg-2 col-sm-4" style="z-index: 1;">
+  <div class="topSecondfilter">
+    <div class=" container ">
+      <div class="row d-flex flex-row justify-content-center">
+        <div class="col col-lg-2 col-md-3 col-sm-4" style="z-index: 1;">
+          <div class="downItems" id="jobsOffers" name="jobsOffers">
+            <div class="select-btn">
+              <span class="btn-text">Jobs Offers </span>
+              <span class="arrow-dwn">
+                <i class="fa-solid fa-chevron-down"></i>
+              </span>
+            </div>
+            <ul class="list-items no-ul-list filter-list" id="listDynamicItems">
+              <input placeholder="search" id="jobInput" />
+              <li class="item form-group">
+                <input id="e1" class="radio-custom" name="jobOffer" type="radio" value="All">
+                <label for="e1" class="radio-custom-label">All</label>
+              </li>
+              <li class="item form-group">
+                <input id="e2" class="radio-custom" name="jobOffer" type="radio" value="Financial Service">
+                <label for="e2" class="radio-custom-label">Financial Service</label>
+              </li>
+              <li class="item form-group">
+                <input id="e3" class="radio-custom" name="jobOffer" type="radio" value="Art, Design, Media">
+                <label for="e3" class="radio-custom-label">Art, Design, Media</label>
+              </li>
+              <li class="item form-group">
+                <input id="e4" class="radio-custom" name="jobOffer" type="radio" value="Coach & Education">
+                <label for="e4" class="radio-custom-label">Coach & Education </label>
+              </li>
+              <li class="item form-group">
+                <input id="e5" class="radio-custom" name="jobOffer" type="radio" value="Apps Developements">
+                <label for="e5" class="radio-custom-label">Apps Developements </label>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+        <div class="col col-lg-2 col-md-3  col-sm-3" style="z-index: 1;">
           <div class="downItems " name="Skills" id="Skills">
             <div class="select-btn" id="Skills">
-              <span class="btn-text text-center">Skills <span class="spanSelected"></span></span>
+              <span class="btn-text text-center">Skills</span></span>
               <span class="arrow-dwn">
                 <i class="fa-solid fa-chevron-down "></i>
               </span>
             </div>
             <ul class="list-items no-ul-list filter-list" id="SkillsList">
-              <input placeholder="search" id="search-skills"/>
+              <input placeholder="search" id="search-skills" class="search-filter-input" />
               <li class="item">
-                <input id="c1" class="checkbox-custom" name="Skills" type="checkbox" value="iPhone & Android"/>
+                <input id="c1" class="checkbox-custom" name="Skills" type="checkbox" value="iPhone & Android" />
                 <label for="c1" class="item-text checkbox-custom-label">iPhone & Android </label>
               </li>
               <li class="item">
-                <input id="c2" class="checkbox-custom" name="Skills" type="checkbox" value="Java & AJAX"/>
+                <input id="c2" class="checkbox-custom" name="Skills" type="checkbox" value="Java & AJAX" />
                 <label for="c2" class="item-text checkbox-custom-label">Java & AJAX </label>
               </li>
-             
+
               <li class="item">
-                <input id="c4" class="checkbox-custom" name="Skills" type="checkbox" value="Account Manager"/>
+                <input id="c4" class="checkbox-custom" name="Skills" type="checkbox" value="Account Manager" />
                 <label for="c4" class="item-text checkbox-custom-label">Account Manager </label>
               </li>
               <li class="item">
-                <input id="c5" class="checkbox-custom" name="Skills" type="checkbox" value="WordPress"/>
+                <input id="c5" class="checkbox-custom" name="Skills" type="checkbox" value="WordPress" />
                 <label for="c5" class="item-text checkbox-custom-label">WordPress </label>
               </li>
               <li class="item">
-                <input id="c6" class="checkbox-custom" name="Skills" type="checkbox" value="Magento"/>
+                <input id="c6" class="checkbox-custom" name="Skills" type="checkbox" value="Magento" />
                 <label for="c6" class="item-text checkbox-custom-label">Magento </label>
               </li>
               <li class="row d-flex justify-content-end flex-row" style="border-top: 1px solid #D9D9D9;">
-                <button  type="submit" class="filter-btn-result col-8 btn ml-2 mt-2" >show result</button>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!--2 eme filtr-->
-        <div class="col-lg-3 col-sm-4" style="z-index: 1;">
-           <div class="downItems " name="typeOfJob" id="typeOfJob">
-            <div class="select-btn" >
-              <span class="btn-text text-center">Job Type</span>
-              <span class="arrow-dwn">
-                <i class="fa-solid fa-chevron-down "></i>
-              </span>
-            </div>
-            <ul class="list-items" id="jobType">
-              
-              <li class="item">
-                <input id="b1" class="checkbox-custom" value="on site" name="jobType" type="checkbox" value="On Site"/>
-                <label for="b1" class="item-text checkbox-custom-label">On Site </label>
-              </li>
-              <li class="item">
-                <input id="b2" class="checkbox-custom" value="Hybride"  name="jobType" type="checkbox" value="Hybride" />
-                <label for="b2" class="item-text checkbox-custom-label">Hybride </label>
-              </li>
-              <li class="item">
-                <input id="b3" class="checkbox-custom" value="Remote" name="jobType" type="checkbox" value="Remote" />
-                <label for="b3" class="item-text checkbox-custom-label">Remote </label>
-              </li>
-              <li class="row d-flex justify-content-end flex-row" style="border-top: 1px solid #D9D9D9;">
-
                 <button type="submit" class="filter-btn-result col-8 btn ml-2 mt-2">show result</button>
               </li>
             </ul>
           </div>
         </div>
 
-        
-        <div class="col-lg-2 d-lg-block d-md-none d-sm-none" style="z-index: 1;">
+        <!--2 eme filtr-->
+        <div class="col-lg-2 col-md-3" style="z-index: 1;">
+          <div class="downItems " name="typeOfJob" id="typeOfJob">
+            <div class="select-btn">
+              <span class="btn-text text-center">Job Type</span>
+              <span class="arrow-dwn">
+                <i class="fa-solid fa-chevron-down "></i>
+              </span>
+            </div>
+            <ul class="list-items" id="jobType">
+
+              <li class="item">
+                <input id="b1" class="checkbox-custom" value="on site" name="jobType" type="checkbox" value="On Site" />
+                <label for="b1" class="item-text checkbox-custom-label">On Site </label>
+              </li>
+              <li class="item">
+                <input id="b2" class="checkbox-custom" value="Hybride" name="jobType" type="checkbox" value="Hybride" />
+                <label for="b2" class="item-text checkbox-custom-label">Hybride </label>
+              </li>
+              <li class="item">
+                <input id="b3" class="checkbox-custom" value="Remote" name="jobType" type="checkbox" value="Remote" />
+                <label for="b3" class="item-text checkbox-custom-label">Remote </label>
+              </li>
+              <div class="d-flex justify-content-end" style="border-top: 1px solid #D9D9D9;">
+                <button type="submit" class="filter-btn-result col-8 btn ml-2 mt-2">show result</button>
+              </div>
+            </ul>
+          </div>
+        </div>
+
+
+        <div class="col-lg-2 col-md-3  d-lg-block d-md-none d-sm-none" style="z-index: 1;">
           <div class="downItems " name="Experience" id="Experience">
             <div class="select-btn" id="Experience">
               <span class="btn-text text-center">Experience</span>
@@ -408,12 +406,12 @@
                 <label for="d4" class="item-text checkbox-custom-label">Director </label>
               </li>
               <li class="row d-flex justify-content-end flex-row" style="border-top: 1px solid #D9D9D9;">
-                <button type="submit" class="filter-btn-result col-8 btn ml-2 mt-2" >show result</button>
+                <button type="submit" class="filter-btn-result col-8 btn ml-2 mt-2">show result</button>
               </li>
             </ul>
           </div>
         </div>
-        <div class="col-lg-3 d-lg-block d-md-none d-sm-none " style="z-index: 1;">
+        <div class="col-lg-2 d-lg-block d-md-none d-sm-none " style="z-index: 1;">
           <div class="downItems ">
             <div class="select-btn show" id="annual-salary">
               <span class="btn-text">annual salary</span>
@@ -422,11 +420,12 @@
               </span>
             </div>
             <ul class="list-items" id="lSpan">
-              <input type="range" class="salairerande form-range" min="1000" max="50000000" id="customRange2" style="width: 100%;">
+              <input type="range" class="salairerande form-range" min="1000" max="50000000" id="customRange2"
+                style="width: 100%;">
             </ul>
           </div>
         </div>
-        <div class="col col-lg-2 col-sm-4" style="z-index: 0;">
+        <div class="col col-lg-2 col-md-3  col-sm-3" style="z-index: 0;">
           <div class="downItems ">
             <div class="select-btn" id="compte">
               <span class="text-center pl-4">All filters</span>
@@ -437,8 +436,8 @@
       </div>
     </div>
   </div>
-   </div>
-  
+  </div>
+
 
 
   <!--end-filters -->
@@ -917,244 +916,40 @@
             </div>
           </div>
 
-          <div class="row">
+          <div class="row d-flex flex-row" >
             <!-- Single Item -->
-            <div class="col-lg-6 col-md-6 col-sm-12">
-              <div class="job_grid_02 shadow_0">
-                <div class="jb_types openings">03 Openings</div>
-                <div class="jb_grid_01_thumb">
-                  <a href="employer-detail.html"><img src="https://via.placeholder.com/100x100" class="img-fluid"
-                      alt="" /></a>
-                </div>
-                <div class="jb_grid_01_caption">
-                  <h4 class="_jb_title">
-                    <a href="employer-detail.html">Google Infotech</a>
-                  </h4>
-                  <div class="_emp_jb">Kanpur, India</div>
-                </div>
-                <div class="jb_grid_01_footer">
-                  <a href="job-detail-1.html" class="_jb_apply">View Job</a>
+            <div class="col-lg-4 " style="border: 1px olid black;" id="jobSection">
+
+            </div>
+            <div class="col-lg-8">
+              <div class="col-lg-12 col-md-6 col-sm-12" >
+                <div class="job_grid_02 shadow_0"  style="height: 30rem;border: 0px solid black;">
+                  <div class="jb_types openings"></div>
+                  <div class="jb_grid_01_thumb">
+                    <a href="employer-detail.html">
+                      <img src="https://via.placeholder.com/100x100" class="img-fluid job-img"
+                        alt="" />
+                      </a>
+                  </div>
+                  <div class="jb_grid_01_caption">
+                    <h4 class="_jb_title">
+                      <a href="employer-detail.html">Google Infotech</a>
+                    </h4>
+                    <p class="description">
+
+                    </p>
+                    <div class="_emp_jb">Kanpur, India</div>
+                    <div class="skills-job" style="color:#5C80B7;margin-right: 12px;">Skills:</div>
+                  </div>
+                  <div class="jb_grid_01_footer">
+                    <a href="job-detail-1.html" class="_jb_apply">View Job</a>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <!-- Single Item -->
-            <div class="col-lg-6 col-md-6 col-sm-12">
-              <div class="job_grid_02 shadow_0">
-                <div class="jb_types openings">07 Openings</div>
-                <div class="jb_grid_01_thumb">
-                  <a href="employer-detail.html"><img src="https://via.placeholder.com/100x100" class="img-fluid"
-                      alt="" /></a>
-                </div>
-                <div class="jb_grid_01_caption">
-                  <h4 class="_jb_title">
-                    <a href="employer-detail.html">Smart Technologies</a>
-                  </h4>
-                  <div class="_emp_jb">Allahabad, UP</div>
-                </div>
-                <div class="jb_grid_01_footer">
-                  <a href="job-detail-1.html" class="_jb_apply">View Job</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Single Item -->
-            <div class="col-lg-6 col-md-6 col-sm-12">
-              <div class="job_grid_02 shadow_0">
-                <div class="jb_types openings">10 Openings</div>
-                <div class="jb_grid_01_thumb">
-                  <a href="employer-detail.html"><img src="https://via.placeholder.com/100x100" class="img-fluid"
-                      alt="" /></a>
-                </div>
-                <div class="jb_grid_01_caption">
-                  <h4 class="_jb_title">
-                    <a href="employer-detail.html">Shaurya Software</a>
-                  </h4>
-                  <div class="_emp_jb">Canada, USA</div>
-                </div>
-                <div class="jb_grid_01_footer">
-                  <a href="job-detail-1.html" class="_jb_apply">View Job</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Single Item -->
-            <div class="col-lg-6 col-md-6 col-sm-12">
-              <div class="job_grid_02 shadow_0">
-                <div class="jb_types openings">12 Openings</div>
-                <div class="jb_grid_01_thumb">
-                  <a href="employer-detail.html"><img src="https://via.placeholder.com/100x100" class="img-fluid"
-                      alt="" /></a>
-                </div>
-                <div class="jb_grid_01_caption">
-                  <h4 class="_jb_title">
-                    <a href="employer-detail.html">Insta Technologies</a>
-                  </h4>
-                  <div class="_emp_jb">Sahiwal, New York</div>
-                </div>
-                <div class="jb_grid_01_footer">
-                  <a href="job-detail-1.html" class="_jb_apply">View Job</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Single Item -->
-            <div class="col-lg-6 col-md-6 col-sm-12">
-              <div class="job_grid_02 shadow_0">
-                <div class="jb_types openings">03 Openings</div>
-                <div class="jb_grid_01_thumb">
-                  <a href="employer-detail.html"><img src="https://via.placeholder.com/100x100" class="img-fluid"
-                      alt="" /></a>
-                </div>
-                <div class="jb_grid_01_caption">
-                  <h4 class="_jb_title">
-                    <a href="employer-detail.html">Arpana Software</a>
-                  </h4>
-                  <div class="_emp_jb">Lucknow, UP</div>
-                </div>
-                <div class="jb_grid_01_footer">
-                  <a href="job-detail-1.html" class="_jb_apply">View Job</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Single Item -->
-            <div class="col-lg-6 col-md-6 col-sm-12">
-              <div class="job_grid_02 shadow_0">
-                <div class="jb_types openings">07 Openings</div>
-                <div class="jb_grid_01_thumb">
-                  <a href="employer-detail.html"><img src="https://via.placeholder.com/100x100" class="img-fluid"
-                      alt="" /></a>
-                </div>
-                <div class="jb_grid_01_caption">
-                  <h4 class="_jb_title">
-                    <a href="employer-detail.html">Dribbble Duker</a>
-                  </h4>
-                  <div class="_emp_jb">Liverpool, London</div>
-                </div>
-                <div class="jb_grid_01_footer">
-                  <a href="job-detail-1.html" class="_jb_apply">View Job</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Single Item -->
-            <div class="col-lg-6 col-md-6 col-sm-12">
-              <div class="job_grid_02 shadow_0">
-                <div class="jb_types openings">04 Openings</div>
-                <div class="jb_grid_01_thumb">
-                  <a href="employer-detail.html"><img src="https://via.placeholder.com/100x100" class="img-fluid"
-                      alt="" /></a>
-                </div>
-                <div class="jb_grid_01_caption">
-                  <h4 class="_jb_title">
-                    <a href="employer-detail.html">Sork Studio Inc.</a>
-                  </h4>
-                  <div class="_emp_jb">Liverpool, London</div>
-                </div>
-                <div class="jb_grid_01_footer">
-                  <a href="job-detail-1.html" class="_jb_apply">View Job</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Single Item -->
-            <div class="col-lg-6 col-md-6 col-sm-12">
-              <div class="job_grid_02 shadow_0">
-                <div class="jb_types openings">11 Openings</div>
-                <div class="jb_grid_01_thumb">
-                  <a href="employer-detail.html"><img src="https://via.placeholder.com/100x100" class="img-fluid"
-                      alt="" /></a>
-                </div>
-                <div class="jb_grid_01_caption">
-                  <h4 class="_jb_title">
-                    <a href="employer-detail.html">Blue Bird Soft</a>
-                  </h4>
-                  <div class="_emp_jb">Montreal, Canada</div>
-                </div>
-                <div class="jb_grid_01_footer">
-                  <a href="job-detail-1.html" class="_jb_apply">View Job</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Single Item -->
-            <div class="col-lg-6 col-md-6 col-sm-12">
-              <div class="job_grid_02 shadow_0">
-                <div class="jb_types openings">06 Openings</div>
-                <div class="jb_grid_01_thumb">
-                  <a href="employer-detail.html"><img src="https://via.placeholder.com/100x100" class="img-fluid"
-                      alt="" /></a>
-                </div>
-                <div class="jb_grid_01_caption">
-                  <h4 class="_jb_title">
-                    <a href="employer-detail.html">Waft Technologies</a>
-                  </h4>
-                  <div class="_emp_jb">Denever, United States</div>
-                </div>
-                <div class="jb_grid_01_footer">
-                  <a href="job-detail-1.html" class="_jb_apply">View Job</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Single Item -->
-            <div class="col-lg-6 col-md-6 col-sm-12">
-              <div class="job_grid_02 shadow_0">
-                <div class="jb_types openings">13 Openings</div>
-                <div class="jb_grid_01_thumb">
-                  <a href="employer-detail.html"><img src="https://via.placeholder.com/100x100" class="img-fluid"
-                      alt="" /></a>
-                </div>
-                <div class="jb_grid_01_caption">
-                  <h4 class="_jb_title">
-                    <a href="employer-detail.html">Smriti Software</a>
-                  </h4>
-                  <div class="_emp_jb">Prayagraj, U.P.</div>
-                </div>
-                <div class="jb_grid_01_footer">
-                  <a href="job-detail-1.html" class="_jb_apply">View Job</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12">
-              <ul class="pagination">
-                <li class="page-item">
-                  <a class="page-link" href="#" aria-label="Previous">
-                    <span class="ti-arrow-left"></span>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                </li>
-                <li class="page-item">
-                  <a class="page-link" href="#">1</a>
-                </li>
-                <li class="page-item">
-                  <a class="page-link" href="#">2</a>
-                </li>
-                <li class="page-item active">
-                  <a class="page-link" href="#">3</a>
-                </li>
-                <li class="page-item">
-                  <a class="page-link" href="#">...</a>
-                </li>
-                <li class="page-item">
-                  <a class="page-link" href="#">18</a>
-                </li>
-                <li class="page-item">
-                  <a class="page-link" href="#" aria-label="Next">
-                    <span class="ti-arrow-right"></span>
-                    <span class="sr-only">Next</span>
-                  </a>
-                </li>
-              </ul>
             </div>
           </div>
         </div>
       </div>
-    </div>
   </section>
   <!-- ============================ Main Section End ================================== -->
 
