@@ -92,6 +92,7 @@ body {
   display: none;
   z-index: 1;
   width: 300px;
+ 
 }
 .select-btn.open ~ .list-items {
   display: block;
@@ -246,11 +247,16 @@ body {
 .topfilter {
     max-height: max-content;
   }
-  .list-items{
-    width: 100%;
+ 
+  #listDynamicItems{
+    
   }
 }
-
+@media (max-width: 576px) {
+.list-items{
+  width: 100%;
+}
+}
 
    
 

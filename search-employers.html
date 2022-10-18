@@ -47,7 +47,7 @@
     <div class="header header-light">
       <div class="container">
         <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="col-xl-12 -col-lg-12 col-md-12 col-sm-12">
             <nav id="navigation" class="navigation navigation-landscape">
               <div class="nav-header">
                 <a class="nav-brand" href="#">
@@ -251,7 +251,7 @@
   <div class="container">
 
     <form class="topfilter row" onsubmit="submitHandler(event)">
-      <div class=" col-lg-12 col-md-12 col-sm-12 ">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
         <div class="row " style="align-items: baseline;" id="inputsTopFilter">
           <div class="col-lg-5 col-md-4 col-sm-4 mt-3  d-lg-block">
             <input type="text" class="form-control" style="border: 0;" placeholder="Job title" />
@@ -276,7 +276,7 @@
   <div class="topSecondfilter">
     <div class=" container ">
       <div class="row d-flex flex-row justify-content-center">
-        <div class="col col-lg-2 col-md-3 col-sm-4" style="z-index: 1;">
+        <div class="col col-lg-2 col-md-3 col-sm-3" style="z-index: 1;padding-right: 0px;">
           <div class="downItems" id="jobsOffers" name="jobsOffers">
             <div class="select-btn">
               <span class="btn-text">Jobs Offers </span>
@@ -284,7 +284,7 @@
                 <i class="fa-solid fa-chevron-down"></i>
               </span>
             </div>
-            <ul class="list-items no-ul-list filter-list" id="listDynamicItems">
+            <ul class="list-items no-ul-list filter-list" id="listDynamicItems" >
               <input placeholder="search" id="jobInput" />
               <li class="item form-group">
                 <input id="e1" class="radio-custom" name="jobOffer" type="radio" value="All">
@@ -310,7 +310,7 @@
 
           </div>
         </div>
-        <div class="col col-lg-2 col-md-3  col-sm-3" style="z-index: 1;">
+        <div class="col-lg-2 col-md-3  col-sm-3" style="z-index: 1;padding-right: 0px;">
           <div class="downItems " name="Skills" id="Skills">
             <div class="select-btn" id="Skills">
               <span class="btn-text text-center">Skills</span></span>
@@ -318,7 +318,7 @@
                 <i class="fa-solid fa-chevron-down "></i>
               </span>
             </div>
-            <ul class="list-items no-ul-list filter-list" id="SkillsList">
+            <ul class="list-items no-ul-list filter-list" id="SkillsList" >
               <input placeholder="search" id="search-skills" class="search-filter-input" />
               <li class="item">
                 <input id="c1" class="checkbox-custom" name="Skills" type="checkbox" value="iPhone & Android" />
@@ -342,14 +342,14 @@
                 <label for="c6" class="item-text checkbox-custom-label">Magento </label>
               </li>
               <li class="row d-flex justify-content-end flex-row" style="border-top: 1px solid #D9D9D9;">
-                <button type="submit" class="filter-btn-result col-8 btn ml-2 mt-2">show result</button>
+                <button type="submit" class="filter-btn-result col-8 btn ml-2 mt-2" id="skillsSubmitBtn">show result</button>
               </li>
             </ul>
           </div>
         </div>
 
         <!--2 eme filtr-->
-        <div class="col-lg-2 col-md-3" style="z-index: 1;">
+        <div class="col-lg-2 col-md-3 col-sm-3" style="z-index: 1;padding-right: 0px;">
           <div class="downItems " name="typeOfJob" id="typeOfJob">
             <div class="select-btn">
               <span class="btn-text text-center">Job Type</span>
@@ -357,12 +357,7 @@
                 <i class="fa-solid fa-chevron-down "></i>
               </span>
             </div>
-            <ul class="list-items" id="jobType">
-
-              <li class="item">
-                <input id="b1" class="checkbox-custom" value="on site" name="jobType" type="checkbox" value="On Site" />
-                <label for="b1" class="item-text checkbox-custom-label">On Site </label>
-              </li>
+            <ul class="list-items" id="jobType" >
               <li class="item">
                 <input id="b2" class="checkbox-custom" value="Hybride" name="jobType" type="checkbox" value="Hybride" />
                 <label for="b2" class="item-text checkbox-custom-label">Hybride </label>
@@ -379,7 +374,7 @@
         </div>
 
 
-        <div class="col-lg-2 col-md-3  d-lg-block d-md-none d-sm-none" style="z-index: 1;">
+        <div class="col-lg-2 col-md-3  d-lg-block d-md-none d-sm-none" style="z-index: 1;padding-right: 0px;">
           <div class="downItems " name="Experience" id="Experience">
             <div class="select-btn" id="Experience">
               <span class="btn-text text-center">Experience</span>
@@ -387,11 +382,11 @@
                 <i class="fa-solid fa-chevron-down "></i>
               </span>
             </div>
-            <ul class="list-items" id="Experience">
+            <ul class="list-items" id="Experience" >
               <input placeholder="search" id="input-experience" />
               <li class="item">
                 <input id="d1" class="checkbox-custom" name="experience" value='Internship alternant' type="checkbox" />
-                <label for="d1" class="item-text checkbox-custom-label">Internship alternant </label>
+                <label for="d1" class="item-text checkbox-custom-label">Internship alternant</label>
               </li>
               <li class="item">
                 <input id="d2" class="checkbox-custom" value="First Job" name="experience" type="checkbox" />
@@ -401,10 +396,7 @@
                 <input id="d3" class="checkbox-custom" name="experience" type="checkbox" />
                 <label for="d3" class="item-text checkbox-custom-label">Manager </label>
               </li>
-              <li class="item">
-                <input id="d4" class="checkbox-custom" name="experience" type="checkbox" />
-                <label for="d4" class="item-text checkbox-custom-label">Director </label>
-              </li>
+           
               <li class="row d-flex justify-content-end flex-row" style="border-top: 1px solid #D9D9D9;">
                 <button type="submit" class="filter-btn-result col-8 btn ml-2 mt-2">show result</button>
               </li>
@@ -419,13 +411,13 @@
                 <i class="fa-solid fa-chevron-down"></i>
               </span>
             </div>
-            <ul class="list-items" id="lSpan">
+            <ul class="list-items" style="width: 300px;" id="lSpan">
               <input type="range" class="salairerande form-range" min="1000" max="50000000" id="customRange2"
                 style="width: 100%;">
             </ul>
           </div>
         </div>
-        <div class="col col-lg-2 col-md-3  col-sm-3" style="z-index: 0;">
+        <div class="col col-lg-2 col-md-3  col-sm-3" style="z-index: 0;padding-right: 0px;">
           <div class="downItems ">
             <div class="select-btn" id="compte">
               <span class="text-center pl-4">All filters</span>
@@ -916,13 +908,13 @@
             </div>
           </div>
 
-          <div class="row d-flex flex-row" >
+          <div class="row d-flex flex-row " >
             <!-- Single Item -->
-            <div class="col-lg-4 " style="border: 1px olid black;" id="jobSection">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-4" id="jobSection">
 
             </div>
-            <div class="col-lg-8">
-              <div class="col-lg-12 col-md-6 col-sm-12" >
+            <div class="col-lg-8 col-md-8 col-sm-8 col-8" >
+              <div class="col-lg-12 col-md-12 col-sm-12" >
                 <div class="job_grid_02 shadow_0"  style="height: 30rem;border: 0px solid black;">
                   <div class="jb_types openings"></div>
                   <div class="jb_grid_01_thumb">
@@ -949,6 +941,7 @@
             </div>
           </div>
         </div>
+
       </div>
   </section>
   <!-- ============================ Main Section End ================================== -->

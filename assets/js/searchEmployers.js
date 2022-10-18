@@ -13,6 +13,12 @@ const closeOtherToggleButton = (item) => {
     }
   });
 };
+selectBtn.forEach((item) =>
+  item.addEventListener("click", () => {
+    item.classList.toggle("open");
+    closeOtherToggleButton(item);
+  })
+);
 
 const FilterTopjobs = {
   jobs: [
@@ -22,45 +28,102 @@ const FilterTopjobs = {
       description:
         "You will help us build API for our compression infrastructure.",
       type: "Hybride",
-      skills: ["Account Manager"],
-      TypeOfJob: ["OnSite", "Hybride"],
+      skills: ["Account Manager","Magento"],
+      TypeOfJob: ["Remote", "Hybride"],
       annualSalary: {
         from: 90000,
         to: 100000,
         currency: "USD",
       },
-      Experience: "First Job",
+      Experience: ["First Job"],
       src: "./assets/img/amazon.png",
       offers: 30,
       country: "us",
       location: "english-english",
     },
     {
-      position: "Apps Developpements",
-      title: "Apps Developpements",
+      position: "Financial Service",
+      title: "Financial Service",
+      description:
+        "You will help us build API for our compression infrastructure.",
+      type: "Hybride",
+      skills: ["Magento"],
+      TypeOfJob: ["On Site", "Remote"],
+      annualSalary: {
+        from: 90000,
+        to: 100000,
+        currency: "USD",
+      },
+      Experience: ["First Job"],
+      src: "./assets/img/amazon.png",
+      offers: 30,
+      country: "us",
+      location: "english-english",
+    },
+    {
+      position: "rf",
+      title: "rf",
+      description:
+        "You will help us build API for our compression infrastructure.",
+      type: "Hybride",
+      skills: ["Account Manager"],
+      TypeOfJob: ["Remote", "Hybride"],
+      annualSalary: {
+        from: 90000,
+        to: 100000,
+        currency: "USD",
+      },
+      Experience: ["First Job"],
+      src: "./assets/img/amazon.png",
+      offers: 30,
+      country: "us",
+      location: "english-english",
+    },
+    {
+      position: "Apps Developements",
+      title: "Apps Developements",
       description:
         "You will help us build API for our compression infrastructure.",
       type: "OnSite",
-      skills: ["java & ajax"],
+      skills: ["Java & AJAX", "MERN STACK","WordPress"],
       TypeOfJob: ["OnSite", "Hybride"],
       annualSalary: {
         from: 90000,
         to: 100000,
         currency: "USD",
       },
-      Experience: "internship alternant",
+      Experience: ["First Job"],
       src: "./assets/img/lenovo.png",
       offers: 150,
       country: "FR",
       location: "french-paris",
     },
     {
-      position: "Art,DesignnMedia",
-      title: "Art,DesignnMedia",
+      position: "Apps Developements",
+      title: "Apps Developements",
+      description:
+        "You will help us build API for our compression infrastructure.",
+      type: "OnSite",
+      skills: ["Java & AJAX", "React js"],
+      TypeOfJob: ["OnSite", "Hybride"],
+      annualSalary: {
+        from: 90000,
+        to: 100000,
+        currency: "USD",
+      },
+      Experience: ["Manager"],
+      src: "./assets/img/lenovo.png",
+      offers: 150,
+      country: "FR",
+      location: "french-paris",
+    },
+    {
+      position: "Art, Design, Media",
+      title: "Art, Design, Media",
       description:
         "You will help us build API for our compression infrastructure.",
       type: "Hybride",
-      skills: ["Iphone & Android"],
+      skills: ["iPhone & Android"],
       TypeOfJob: ["OnSite", "Hybride"],
       annualSalary: {
         from: 4000,
@@ -68,8 +131,8 @@ const FilterTopjobs = {
         currency: "USD",
       },
       country: "TN",
-      Experience: "first job",
-      src: "./assets/img/canada.svg",
+      Experience: ["Manager"],
+      src: "./assets/img/strip.png",
       offers: 22,
       location: "tunis-tunis",
     },
@@ -79,7 +142,7 @@ const FilterTopjobs = {
       description:
         "You will help us build API for our compression infrastructure.",
       type: "Hybride",
-      skills: ["react native",'js'],
+      skills: ["react native", "js"],
       TypeOfJob: ["OnSite", "Hybride"],
       annualSalary: {
         from: 4000,
@@ -87,18 +150,18 @@ const FilterTopjobs = {
         currency: "USD",
       },
       country: "TN",
-      Experience: "first job",
-      src: "./assets/img/canada.svg",
+      Experience: ["Manager"],
+      src: "./assets/img/word.png",
       offers: 500,
       location: "br",
     },
     {
-      position: "manager",
-      title: "manager",
+      position: "Coach & Education",
+      title: "Coach & Education",
       description:
         "You will help us build API for our compression infrastructure.",
       type: "Hybride",
-      skills: ["react native"],
+      skills: ["C++,ASD"],
       TypeOfJob: ["OnSite", "Hybride"],
       annualSalary: {
         from: 4000,
@@ -106,17 +169,18 @@ const FilterTopjobs = {
         currency: "USD",
       },
       country: "TN",
-      Experience: "first job",
-      src: "./assets/img/canada.svg",
+      Experience: ["Internship alternant"],
+      src: "./assets/img/spotify.png",
       offers: 500,
-      location: "br",
-    },  {
+      location: "tunis-centre ville",
+    },
+    {
       position: "OS admistrator",
       title: "OS admistrator",
       description:
         "You will help us build API for our compression infrastructure.",
       type: "Hybride",
-      skills: ["react native",'js'],
+      skills: ["react native", "js"],
       TypeOfJob: ["windows10", "linux"],
       annualSalary: {
         from: 4000,
@@ -132,155 +196,8 @@ const FilterTopjobs = {
   ],
 };
 
-const getFilters = (id, item) => {
-  filters[id].items.push(item);
-  // manupulation DOM
 
-  // get ID
-  // change innerHTML
-};
 
-FilterTopjobs.jobs.forEach((job) => {
-  const jobSection = document.getElementById("jobSection");
-  let mainItems = document.createElement("div");
-  mainItems.classList.add("col-lg-12");
-  let companyTitle = document.createElement("div");
-  companyTitle.classList.add("company-Title");
-  let row = document.createElement("div");
-  row.classList.add("row");
-  let logoCompany = document.createElement("div");
-  logoCompany.classList.add("col-2", "logoCompany");
-  let logoCompanysrc = document.createElement("img");
-  logoCompanysrc.src = job.src;
-  //*title and position
-  let jobDesc = document.createElement("div");
-  jobDesc.classList.add("col-8");
-  let div = document.createElement("div");
-  let titleJob = document.createElement("div");
-  titleJob.classList.add("title-job");
-  titleJob.innerHTML = job.title;
-  let contryJob = document.createElement("div");
-  contryJob.classList.add("contry-job");
-  contryJob.innerHTML = job.country;
-  let positionjob = document.createElement("div");
-  positionjob.classList.add("position-job");
-  positionjob.innerHTML = job.location;
-  //append
-  logoCompany.appendChild(logoCompanysrc);
-  row.appendChild(logoCompany);
-  div.appendChild(titleJob);
-  div.appendChild(contryJob);
-  div.appendChild(positionjob);
-  jobDesc.appendChild(div);
-  row.appendChild(jobDesc);
-  companyTitle.appendChild(row);
-  mainItems.appendChild(companyTitle);
-  jobSection.appendChild(mainItems);
-  console.log("attr");
-});
-const attr = document.querySelectorAll(".company-Title");
-
-attr.forEach((job) => {
-  let span = document.createElement('span')
-  
-  job.addEventListener("click", () => {
-    span.innerHTML=''
-    //dom
-    FilterTopjobs.jobs.forEach((findjob) => {
-      if (findjob.title === job.querySelector(".title-job").innerHTML) {
-        document.querySelector('.jb_types').innerHTML=`${findjob.offers} poste`
-        document.querySelector('._jb_title a').innerHTML=`${findjob.title}`
-        document.querySelector('._emp_jb').innerHTML=`location ${findjob.location}`
-        document.querySelector('.description').innerHTML=`description: ${findjob.description}`
-        document.querySelector('.job-img').src=findjob.src
-        findjob.skills.forEach(skill=>{
-          
-          span.innerHTML=skill
-          span.style='color:#6671B0;margin-left:8px;'
-          document.querySelector('.skills-job').appendChild(span)
-        })
-       
-      }
-    });
-  });
-});
-
-function submitHandler(event) {
-  event.preventDefault();
-
-  // get Inputs values
-  let jobOfferElement = document.querySelector(
-    'input[name="jobOffer"]:checked'
-  );
-  let SkillsElement = document.querySelectorAll('input[name="Skills"]:checked');
-  let jobTypeElement = document.querySelectorAll(
-    'input[name="jobType"]:checked'
-  );
-  let ExperienceElement = document.querySelectorAll(
-    'input[name="experience"]:checked'
-  );
-  // Build body request
-
-  if (jobOfferElement) {
-    document.querySelector("#jobsOffers .btn-text").innerHTML =
-      jobOfferElement.value;
-    document.querySelector("#jobsOffers .select-btn").style =
-      "background: #01B753;";
-    document.querySelector("#jobsOffers .btn-text").style = "color:white";
-  } else {
-    document.querySelector("#jobsOffers .btn-text").innerHTML = "Jobs Offers";
-  }
-  if (SkillsElement.length > 0) {
-    document.querySelector("#Skills .select-btn").style =
-      "background: #01B753;";
-    document.querySelector(
-      "#Skills .btn-text"
-    ).innerHTML = `Skills(${SkillsElement.length})`;
-    document.querySelector("#Skills .btn-text").style = "color:white";
-  } else {
-    document.querySelector("#Skills .btn-text").innerHTML = `Skills`;
-    document.querySelector("#Skills .select-btn").style = "background: #fffff;";
-    document.querySelector("#Skills .btn-text").style = "color:black";
-  }
-  if (jobTypeElement.length > 0) {
-    document.querySelector("#typeOfJob .select-btn").style =
-      "background: #01B753;";
-    document.querySelector(
-      "#typeOfJob .btn-text"
-    ).innerHTML = `typeOfJob(${jobTypeElement.length})`;
-    document.querySelector("#typeOfJob .btn-text").style = "color:white";
-  } else {
-    document.querySelector("#typeOfJob .btn-text").innerHTML = `Job Type`;
-    document.querySelector("#typeOfJob .select-btn").style =
-      "background: #ffffff;";
-    document.querySelector("#typeOfJob .btn-text").style = "color:black";
-  }
-  if (ExperienceElement.length > 0) {
-    document.querySelector("#Experience .select-btn").style =
-      "background: #01B753;";
-    document.querySelector(
-      "#Experience .btn-text"
-    ).innerHTML = `Experience(${ExperienceElement.length})`;
-    document.querySelector("#Experience .btn-text").style = "color:white";
-  } else {
-    document.querySelector("#Experience .btn-text").innerHTML = `Experience`;
-    document.querySelector("#Experience .select-btn").style =
-      "background: #ffffff;";
-    document.querySelector("#Experience .btn-text").style = "color:black";
-  }
-  // debugger;
-}
-
-selectBtn.forEach((item) =>
-  item.addEventListener("click", () => {
-    item.classList.toggle("open");
-    closeOtherToggleButton(item);
-  })
-);
-
-//Telétravail filter
-
-//Telétravail filter
 typeOfJob = document.querySelectorAll("#typeOfJob .item");
 
 typeOfJob.forEach((item) => {
@@ -307,6 +224,275 @@ $(document).ready(function () {
     $(".menu-btn").removeClass("disable");
   });
 });
+const jobSection = document.getElementById("jobSection");
+FilterTopjobs.jobs.forEach((job) => {
+  let mainItems = document.createElement("div");
+  mainItems.classList.add("col-lg-12");
+  let companyTitle = document.createElement("div");
+  companyTitle.classList.add("company-Title");
+  let row = document.createElement("div");
+  row.classList.add("row");
+  let logoCompany = document.createElement("div");
+  logoCompany.classList.add("col-lg-2", "logoCompany" ,'col-md-4','col-sm-6');
+  let logoCompanysrc = document.createElement("img");
+  logoCompanysrc.src = job.src;
+  //*title and position
+  let jobDesc = document.createElement("div");
+  jobDesc.classList.add("col-8");
+  let div = document.createElement("div");
+  let titleJob = document.createElement("div");
+  titleJob.classList.add("title-job");
+  titleJob.innerHTML = job.title;
+  let contryJob = document.createElement("div");
+  contryJob.classList.add("contry-job");
+  contryJob.innerHTML = job.country;
+  let positionjob = document.createElement("div");
+  positionjob.classList.add("position-job");
+  positionjob.innerHTML = job.location;
+  //append
+  logoCompany.appendChild(logoCompanysrc);
+  row.appendChild(logoCompany);
+  div.appendChild(titleJob);
+  div.appendChild(contryJob);
+  div.appendChild(positionjob);
+  jobDesc.appendChild(div);
+  row.appendChild(jobDesc);
+  companyTitle.appendChild(row);
+  mainItems.appendChild(companyTitle);
+  jobSection.appendChild(mainItems);
+});
+const attr = document.querySelectorAll(".company-Title");
+
+attr.forEach((job) => {
+  job.addEventListener("click", () => {
+    document.querySelector(".skills-job").innerHTML = "SKILLS :";
+    document.querySelector(".skills-job").style =
+      "color:#5C80B7;margin-right: 12px;";
+    //dom
+    FilterTopjobs.jobs.forEach((findjob) => {
+      if (findjob.title === job.querySelector(".title-job").innerHTML) {
+        document.querySelector(
+          ".jb_types"
+        ).innerHTML = `${findjob.offers} poste`;
+        document.querySelector("._jb_title a").innerHTML = `${findjob.title}`;
+        document.querySelector(
+          "._emp_jb"
+        ).innerHTML = `location ${findjob.location}`;
+        document.querySelector(
+          ".description"
+        ).innerHTML = `description: ${findjob.description}`;
+        document.querySelector(".job-img").src = findjob.src;
+        findjob.skills.forEach((skill) => {
+          let span = document.createElement("span");
+          span.innerHTML = "";
+          span.innerHTML = `${skill} , `;
+          span.style = "color:#6671B0;margin-left:8px;";
+          document.querySelector(".skills-job").appendChild(span);
+        });
+      }
+    });
+  });
+});
+
+const attrbute = document.querySelectorAll(".company-Title");
+attrbute.forEach((job,indx) => {
+  job.addEventListener("click", () => {
+  
+    document.querySelector(".skills-job").innerHTML = "SKILLS :";
+    document.querySelector(".skills-job").style =
+      "color:#5C80B7;margin-right: 12px;";
+    FilterTopjobs.jobs.forEach((findjob,cntr) => {
+
+      if (findjob.title === job.querySelector(".title-job").innerHTML && indx==cntr) {
+        document.querySelector(
+          ".jb_types"
+        ).innerHTML = `${findjob.offers} poste`;
+        document.querySelector("._jb_title a").innerHTML = `${findjob.title}`;
+        document.querySelector(
+          "._emp_jb"
+        ).innerHTML = `location ${findjob.location}`;
+        document.querySelector(
+          ".description"
+        ).innerHTML = `description: ${findjob.description}`;
+        document.querySelector(".job-img").src = findjob.src;
+        findjob.skills.forEach((skill) => {
+          let span = document.createElement("span");
+          span.innerHTML = "";
+          span.innerHTML = `${skill} , `;
+          span.style = "color:#6671B0;margin-left:8px;";
+          document.querySelector(".skills-job").appendChild(span);
+        });
+      }
+    });
+  });
+});
+function submitHandler(event) {
+  event.preventDefault();
+  var arrayJobs=[{}]
+  // get Inputs values
+  let jobOfferElement = document.querySelector(
+    'input[name="jobOffer"]:checked'
+  );
+  let SkillsElement = document.querySelectorAll('input[name="Skills"]:checked');
+  let jobTypeElement = document.querySelectorAll(
+    'input[name="jobType"]:checked'
+  );
+  let ExperienceElement = document.querySelectorAll(
+    'input[name="experience"]:checked'
+  );
+  // Build body request
+
+  if (jobOfferElement) {
+    arrayJobs = FilterTopjobs.jobs.filter(function (i, n) {
+      if (jobOfferElement.value == "All") {
+        return i.position
+      } else if (i.position == jobOfferElement.value) {
+        return i.position;
+      }
+    });
+  
+    document.querySelector("#jobsOffers .btn-text").innerHTML =
+      jobOfferElement.value;
+    document.querySelector("#jobsOffers .select-btn").style =
+      "background: #01B753;";
+    document.querySelector("#jobsOffers .btn-text").style = "color:white";
+  } else {
+    arrayJobs = FilterTopjobs.jobs;
+    document.querySelector("#jobsOffers .btn-text").innerHTML = "Jobs Offers";
+  }
+  if (SkillsElement.length > 0) {
+    SkillsElement.forEach((item)=>{
+      arrayJobs = arrayJobs.filter(function (i, n) {
+        
+      if (i.skills.includes(item.value)) {
+        console.log(i)
+          return i;
+        }
+    })})
+    document.querySelector("#Skills .select-btn").style =
+      "background: #01B753;";
+    document.querySelector(
+      "#Skills .btn-text"
+    ).innerHTML = `Skills(${SkillsElement.length})`;
+    document.querySelector("#Skills .btn-text").style = "color:white";
+  } else {
+  
+    document.querySelector("#Skills .btn-text").innerHTML = `Skills`;
+    document.querySelector("#Skills .select-btn").style = "background: #fffff;";
+    document.querySelector("#Skills .btn-text").style = "color:black";
+  }
+  if (jobTypeElement.length > 0) {
+    jobTypeElement.forEach((item)=>{
+      arrayJobs = arrayJobs.filter(function (i, n) {
+      if (i.TypeOfJob.includes(item.value)) {
+        console.log(i)
+          return i;
+        }
+    })})
+    document.querySelector("#typeOfJob .select-btn").style =
+      "background: #01B753;";
+    document.querySelector(
+      "#typeOfJob .btn-text"
+    ).innerHTML = `typeOfJob(${jobTypeElement.length})`;
+    document.querySelector("#typeOfJob .btn-text").style = "color:white";
+  } else {
+    document.querySelector("#typeOfJob .btn-text").innerHTML = `Job Type`;
+    document.querySelector("#typeOfJob .select-btn").style =
+      "background: #ffffff;";
+    document.querySelector("#typeOfJob .btn-text").style = "color:black";
+  }
+  if (ExperienceElement.length > 0) {
+    ExperienceElement.forEach((item)=>{
+      arrayJobs = arrayJobs.filter(function (i, n) {
+      if (i.Experience.includes(item.value)) {
+        console.log(i)
+          return i;
+        }
+    })})
+    document.querySelector("#Experience .select-btn").style =
+      "background: #01B753;";
+    document.querySelector(
+      "#Experience .btn-text"
+    ).innerHTML = `Experience(${ExperienceElement.length})`;
+    document.querySelector("#Experience .btn-text").style = "color:white";
+  } else {
+    document.querySelector("#Experience .btn-text").innerHTML = `Experience`;
+    document.querySelector("#Experience .select-btn").style =
+      "background: #ffffff;";
+    document.querySelector("#Experience .btn-text").style = "color:black";
+  }
+
+  jobSection.innerHTML = "";
+  arrayJobs.forEach((job) => {
+    let mainItems = document.createElement("div");
+    mainItems.classList.add("col-lg-12");
+    let companyTitle = document.createElement("div");
+    companyTitle.classList.add("company-Title");
+    let row = document.createElement("div");
+    row.classList.add("row");
+    let logoCompany = document.createElement("div");
+    logoCompany.classList.add("col-2", "logoCompany");
+    let logoCompanysrc = document.createElement("img");
+    logoCompanysrc.src = job.src;
+    //*title and position
+    let jobDesc = document.createElement("div");
+    jobDesc.classList.add("col-8");
+    let div = document.createElement("div");
+    let titleJob = document.createElement("div");
+    titleJob.classList.add("title-job");
+    titleJob.innerHTML = job.title;
+    let contryJob = document.createElement("div");
+    contryJob.classList.add("contry-job");
+    contryJob.innerHTML = job.country;
+    let positionjob = document.createElement("div");
+    positionjob.classList.add("position-job");
+    positionjob.innerHTML = job.location;
+    //append
+    logoCompany.appendChild(logoCompanysrc);
+    row.appendChild(logoCompany);
+    div.appendChild(titleJob);
+    div.appendChild(contryJob);
+    div.appendChild(positionjob);
+    jobDesc.appendChild(div);
+    row.appendChild(jobDesc);
+    companyTitle.appendChild(row);
+    mainItems.appendChild(companyTitle);
+    jobSection.appendChild(mainItems);
+  });
+  
+  const attrbute = document.querySelectorAll(".company-Title");
+  attrbute.forEach((job,indx) => {
+    job.addEventListener("click", () => {
+    
+      document.querySelector(".skills-job").innerHTML = "SKILLS :";
+      document.querySelector(".skills-job").style =
+        "color:#5C80B7;margin-right: 12px;";
+        arrayJobs.forEach((findjob,cntr) => {
+       
+        if (findjob.title === job.querySelector(".title-job").innerHTML && indx==cntr) {
+          document.querySelector(
+            ".jb_types"
+          ).innerHTML = `${findjob.offers} poste`;
+          document.querySelector("._jb_title a").innerHTML = `${findjob.title}`;
+          document.querySelector(
+            "._emp_jb"
+          ).innerHTML = `location ${findjob.location}`;
+          document.querySelector(
+            ".description"
+          ).innerHTML = `description: ${findjob.description}`;
+          document.querySelector(".job-img").src = findjob.src;
+          findjob.skills.forEach((skill) => {
+            let span = document.createElement("span");
+            span.innerHTML = "";
+            span.innerHTML = `${skill} , `;
+            span.style = "color:#6671B0;margin-left:8px;";
+            document.querySelector(".skills-job").appendChild(span);
+          });
+        }
+      });
+    });
+  });
+}
 
 const skill = document.getElementById("search-skills");
 skill.addEventListener("input", filtersSkills2);
@@ -322,9 +508,9 @@ function filtersSkills2() {
     let text = item.value;
     if (text.toLowerCase().includes(filter.toLowerCase())) {
       list[i].style.display = "";
+      console.log(list[i]);
     } else {
       list[i].style.display = "none";
-      // item.checked=false
     }
   });
 }
@@ -346,6 +532,7 @@ function filtersSkills4() {
     let text = item.value;
     if (text.toLowerCase().includes(filter.toLowerCase())) {
       list[i].style.display = "";
+      console.log(list[i].querySelector("label").innerHTML);
     } else {
       list[i].style.display = "none";
     }
@@ -369,6 +556,7 @@ function filtersSkills() {
     let text = item.value;
     if (text.toLowerCase().includes(filter.toLowerCase())) {
       list[i].style.display = "";
+      const selected = list[i].querySelector("label").innerHTML;
     } else {
       list[i].style.display = "none";
     }
