@@ -252,9 +252,9 @@
 
     <form class="topfilter row" onsubmit="submitHandler(event)">
       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
-        <div class="row " style="align-items: baseline;" id="inputsTopFilter">
+        <div class="row " style="align-items: baseline;" id="titleJob">
           <div class="col-lg-5 col-md-4 col-sm-4 mt-3  d-lg-block">
-            <input type="text" class="form-control" style="border: 0;" placeholder="Job title" />
+            <input type="text" class="form-control" style="border: 0;" name="titleJob"  placeholder="Job title" />
           </div>
           <div class=" col-lg-6 col-md-7  col-sm-7 mt-3 d-lg-block">
             <input type="text" class="form-control" placeholder="Localisation  |  postal code" style="border: 0;" />
@@ -411,10 +411,14 @@
               <span class="arrow-dwn">
                 <i class="fa-solid fa-chevron-down"></i>
               </span>
+              
             </div>
             <ul class="list-items" style="width: 300px;" id="lSpan">
               <input type="number" class="salairerande form-range" min="1000" max="50000000" id="customRange2"
                 style="width: 100%;">
+                <li class="row d-flex justify-content-end flex-row" style="border-top: 1px solid #D9D9D9;">
+                  <button type="submit" class="filter-btn-result col-8 btn ml-2 mt-2">show result</button>
+                </li>
             </ul>
           </div>
         </div>

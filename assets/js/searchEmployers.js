@@ -335,6 +335,7 @@ function submitHandler(event) {
   let jobOfferElement = document.querySelector(
     'input[name="jobOffer"]:checked'
   );
+  let jobtittle = document.querySelector('input[name="titleJob"]');
   let SkillsElement = document.querySelectorAll('input[name="Skills"]:checked');
   let jobTypeElement = document.querySelectorAll(
     'input[name="jobType"]:checked'
@@ -343,7 +344,18 @@ function submitHandler(event) {
     'input[name="experience"]:checked'
   );
   // Build body request
-
+  if (jobtittle) {
+    arrayJobs = FilterTopjobs.jobs.filter(function (i, n) {
+      if (jobtittle.value == "All") {
+        return i.position
+      } else if (i.position == jobtittle.value) {
+        return i.position;
+      }
+    });
+    console.log(arrayJobs)
+  } else {
+    arrayJobs = FilterTopjobs.jobs;
+  }
   if (jobOfferElement) {
     arrayJobs = FilterTopjobs.jobs.filter(function (i, n) {
       if (jobOfferElement.value == "All") {
@@ -359,7 +371,7 @@ function submitHandler(event) {
       "background: #01B753;";
     document.querySelector("#jobsOffers .btn-text").style = "color:white";
   } else {
-    arrayJobs = FilterTopjobs.jobs;
+    
     document.querySelector("#jobsOffers .btn-text").innerHTML = "Jobs Offers";
   }
   if (SkillsElement.length > 0) {
