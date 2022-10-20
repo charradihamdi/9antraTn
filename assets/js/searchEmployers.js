@@ -26,7 +26,7 @@ const FilterTopjobs = {
       position: "Financial Service",
       title: "Financial Service",
       description:
-        "You will help us build API for our compression infrastructure.",
+        "representative's responsibilities include responding to clients' inquiries in a professional manner, providing sound financial advice to clients, cross-selling our products and services where possible, and attending various training programs as required.",
       type: "Hybride",
       skills: ["Account Manager","Magento"],
       TypeOfJob: ["Remote", "Hybride"],
@@ -45,7 +45,7 @@ const FilterTopjobs = {
       position: "Financial Service",
       title: "Financial Service",
       description:
-        "You will help us build API for our compression infrastructure.",
+        "representative's responsibilities include responding to clients' inquiries in a professional manner, providing sound financial advice to clients, cross-selling our products and services where possible, and attending various training programs as required.",
       type: "Hybride",
       skills: ["Magento"],
       TypeOfJob: ["On Site", "Remote"],
@@ -61,12 +61,12 @@ const FilterTopjobs = {
       location: "english-english",
     },
     {
-      position: "rf",
-      title: "rf",
+      position: "Human resources ",
+      title: "Human resources ",
       description:
         "You will help us build API for our compression infrastructure.",
       type: "Hybride",
-      skills: ["Account Manager"],
+      skills: ["ENG",'FR'],
       TypeOfJob: ["Remote", "Hybride"],
       annualSalary: {
         from: 90000,
@@ -155,25 +155,7 @@ const FilterTopjobs = {
       offers: 500,
       location: "br",
     },
-    {
-      position: "Coach & Education",
-      title: "Coach & Education",
-      description:
-        "You will help us build API for our compression infrastructure.",
-      type: "Hybride",
-      skills: ["C++,ASD"],
-      TypeOfJob: ["OnSite", "Hybride"],
-      annualSalary: {
-        from: 4000,
-        to: 10000,
-        currency: "USD",
-      },
-      country: "TN",
-      Experience: ["Internship alternant"],
-      src: "./assets/img/spotify.png",
-      offers: 500,
-      location: "tunis-centre ville",
-    },
+    
     {
       position: "OS admistrator",
       title: "OS admistrator",
@@ -233,7 +215,7 @@ FilterTopjobs.jobs.forEach((job) => {
   let row = document.createElement("div");
   row.classList.add("row");
   let logoCompany = document.createElement("div");
-  logoCompany.classList.add("col-lg-2", "logoCompany" ,'col-md-2','col-sm-2');
+  logoCompany.classList.add("col-lg-3", "logoCompany" ,'col-md-2','col-sm-2');
   let logoCompanysrc = document.createElement("img");
 
   logoCompanysrc.src = job.src;
@@ -278,10 +260,10 @@ attr.forEach((job) => {
         document.querySelector("._jb_title a").innerHTML = `${findjob.title}`;
         document.querySelector(
           "._emp_jb"
-        ).innerHTML = `location ${findjob.location}`;
+        ).innerHTML = `location: ${findjob.location}`;
         document.querySelector(
           ".description"
-        ).innerHTML = `description: ${findjob.description}`;
+        ).innerHTML = `${findjob.description}`;
         document.querySelector(".job-img").src = findjob.src;
         findjob.skills.forEach((skill) => {
           let span = document.createElement("span");
@@ -333,7 +315,7 @@ attrbute.forEach((job,indx) => {
         ).innerHTML = `location ${findjob.location}`;
         document.querySelector(
           ".description"
-        ).innerHTML = `description: ${findjob.description}`;
+        ).innerHTML = `${findjob.description}`;
         document.querySelector(".job-img").src = findjob.src;
         findjob.skills.forEach((skill) => {
           let span = document.createElement("span");
@@ -483,7 +465,24 @@ function submitHandler(event) {
   const attrbute = document.querySelectorAll(".company-Title");
   attrbute.forEach((job,indx) => {
     job.addEventListener("click", () => {
-    
+      if(window.innerWidth<=990){
+        document.getElementById('jobSection').style="display:none"
+        document.getElementById('job-details-hiden').style="display:block"
+      }
+      window.addEventListener('resize',()=>{
+        console.log(window.innerWidth)
+        if(window.innerWidth>990){
+          document.getElementById('jobSection').style="display:block"
+        }
+        if(window.innerWidth<=990){
+          document.getElementById('jobSection').style="display:none"
+          document.getElementById('job-details-hiden').style="display:block"
+        }
+      })
+      document.querySelector('.retourPage').addEventListener('click',()=>{
+        console.log('first')
+      window.location='http://127.0.0.1:5500/search-employers.html'
+      })
       document.querySelector(".skills-job").innerHTML = "SKILLS :";
       document.querySelector(".skills-job").style =
         "color:#5C80B7;margin-right: 12px;";
