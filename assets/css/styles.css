@@ -5091,6 +5091,7 @@ img._featured_jbs {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
 }
 .jb_grid_01_thumb {
   position: relative;
@@ -11553,11 +11554,21 @@ textarea.form-control::placeholder {
 
 .company-Title {
   margin-top: 1rem;
+  background-color: white;
+  padding: 1rem 1rem 1rem 1rem;
+}
+#jobSection{
+  border: 1px solid #0B85EC;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+  height: 90vh;
+  overflow-y: scroll;
+  
 }
 .company-Title :hover {
   cursor: pointer;
-  background: #c3c3c3;
-  border: 1px solid #c3c3c3;
+  background: #ffff;
+  border: 1px solid #ffff;
   border-radius: 8px;
 }
 .logoCompany img {
@@ -11578,3 +11589,39 @@ textarea.form-control::placeholder {
   font-family: "Poppins", sans-serif;
   color: #666697;
 }
+@media (max-width: 991px) {
+  #job-details-hiden{
+    display: none;
+   }
+   #jobSection{
+    overflow-y: none;
+    height: 100%;
+   }
+  
+}
+@media (min-width: 1000px) {
+.logoCompany img{
+  height: 40px;
+  width: 40px;
+ }
+}
+@media (min-width: 1000px) {
+  .logoCompany img{
+    height: 40px;
+    width: 40px;
+   }
+  }
+  .retourPage{
+    display: flex;
+    font-size: 18px;
+    background-color: #C4C4C4;
+    width: 28px;
+  }
+  .retourPage :hover{
+    cursor: pointer;
+  }
+  @media (min-width: 991px) {
+  .retourPage{
+    display: none;
+  }
+  }

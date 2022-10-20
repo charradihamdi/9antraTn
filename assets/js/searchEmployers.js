@@ -233,15 +233,16 @@ FilterTopjobs.jobs.forEach((job) => {
   let row = document.createElement("div");
   row.classList.add("row");
   let logoCompany = document.createElement("div");
-  logoCompany.classList.add("col-lg-2", "logoCompany" ,'col-md-4','col-sm-6');
+  logoCompany.classList.add("col-lg-2", "logoCompany" ,'col-md-2','col-sm-2');
   let logoCompanysrc = document.createElement("img");
+
   logoCompanysrc.src = job.src;
   //*title and position
   let jobDesc = document.createElement("div");
   jobDesc.classList.add("col-8");
   let div = document.createElement("div");
   let titleJob = document.createElement("div");
-  titleJob.classList.add("title-job");
+  titleJob.classList.add("title-job",'text-wrap');
   titleJob.innerHTML = job.title;
   let contryJob = document.createElement("div");
   contryJob.classList.add("contry-job");
@@ -298,6 +299,25 @@ const attrbute = document.querySelectorAll(".company-Title");
 attrbute.forEach((job,indx) => {
   job.addEventListener("click", () => {
   
+    if(window.innerWidth<=990){
+      document.getElementById('jobSection').style="display:none"
+      document.getElementById('job-details-hiden').style="display:block"
+    }
+    window.addEventListener('resize',()=>{
+      console.log(window.innerWidth)
+      if(window.innerWidth>990){
+        document.getElementById('jobSection').style="display:block"
+      }
+      if(window.innerWidth<=990){
+        document.getElementById('jobSection').style="display:none"
+        document.getElementById('job-details-hiden').style="display:block"
+      }
+    })
+    document.querySelector('.retourPage').addEventListener('click',()=>{
+      console.log('first')
+    window.location='http://127.0.0.1:5500/search-employers.html'
+    })
+ 
     document.querySelector(".skills-job").innerHTML = "SKILLS :";
     document.querySelector(".skills-job").style =
       "color:#5C80B7;margin-right: 12px;";
@@ -562,3 +582,4 @@ function filtersSkills() {
     }
   });
 }
+
