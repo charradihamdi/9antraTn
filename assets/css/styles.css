@@ -7111,14 +7111,14 @@ ul.pricing_lists li:before {
   margin: 25px;
   cursor: pointer;
   border: 0px solid black;
-  left: 0;
-  border: 1px solid #ffff;
+  right: 0;
+  border: 1px solid black;
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  color: #ffffff;
+  color: black;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  background-color: black;
+
 }
 .menu-btn.disable {
   display: none;
