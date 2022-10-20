@@ -498,7 +498,7 @@ function submitHandler(event) {
           ).innerHTML = `location ${findjob.location}`;
           document.querySelector(
             ".description"
-          ).innerHTML = `description: ${findjob.description}`;
+          ).innerHTML = `${findjob.description}`;
           document.querySelector(".job-img").src = findjob.src;
           findjob.skills.forEach((skill) => {
             let span = document.createElement("span");

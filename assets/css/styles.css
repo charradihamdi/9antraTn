@@ -11574,22 +11574,49 @@ textarea.form-control::placeholder {
   margin-top: 1rem;
   background-color: white;
   padding: 1rem 1rem 1rem 1rem;
+  border-top: 3px solid #6E93F7;
 }
 
 #jobSection{
   border: 1px solid #ffff;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
-  height: 84vh;
+  height: 96vh;
   overflow-y: scroll;
   padding-bottom: 10px;
+  
 }
+
+#jobSection::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+
+ 
+}
+
+#jobSection::-webkit-scrollbar
+{
+	width: 8px;
+	background-color: #2D6BBB;
+}
+
+#jobSection::-webkit-scrollbar-thumb
+{
+	border-radius: 12px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: white;
+  border: 11px solid white;
+}
+
 
 .company-Title :hover {
   cursor: pointer;
   background: #ffff;
-  border: 1px solid #ffff;
-  border-radius: 8px;
+  border: 0px solid #97A4AF;
+  border-radius: 12px;
+
 }
 .logoCompany img {
   width: 48px;
