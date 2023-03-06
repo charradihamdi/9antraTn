@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Muli:300,400,600,700");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+* {
+  outline: none;
+}
+
+body {
+  background: #ececec;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  font-weight: 400;
+  line-height: 1.7;
+  height: 500px;
+}
+
+.main-wrapper {
+  width: 87%;
+  display: flex;
+  flex-direction: row;
+}
+.main-wrapper .sidebar {
+  padding-left: 12%;
+  border-right: 2px solid #cec8c8;
+  border-top-right-radius: 6%;
+  width: 243px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  height: 98vh;
+}
+.main-wrapper .sidebar .logo {
+  margin-top: 12px;
+  width: 90%;
+  margin-bottom: 10%;
+}
+.main-wrapper .sidebar i {
+  display: flex;
+  height: 18px;
+  border: 0px solid #cec8c8;
+  border: 0px solid black;
+  width: 227px;
+  height: 26px;
+  margin: 0.7rem;
+}
+.main-wrapper .sidebar i:hover {
+  cursor: pointer;
+  border-right: 4px solid #b13f6e;
+}
+.main-wrapper .sidebar i:focus, .main-wrapper .sidebar i::after {
+  cursor: pointer;
+  border-left: 4px solid #b13f6e;
+}
+.main-wrapper .sidebar i img {
+  height: 17px;
+  width: 17px;
+  display: flex;
+  align-self: center;
+}
+.main-wrapper .sidebar i div {
+  display: flex;
+  align-self: center;
+  margin-left: 12%;
+}
+.main-wrapper .menu-img {
+  margin-top: 50%;
+  position: relative;
+}
+.main-wrapper .menu-img .btn-img {
+  border: none;
+  width: 80%;
+  height: 48px;
+  background-color: #f7b24c;
+  border-radius: 4px;
+  position: absolute;
+  transform: translateX(-50%);
+  margin-top: 77%;
+  margin-left: 50%;
+  box-shadow: #f7b24c;
+  color: white;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+}
+.main-wrapper .menu-img .btn-img:hover {
+  cursor: pointer;
+  box-shadow: inset 0 -3px 5px rgba(0, 0, 0, 0.2);
+}
+.main-wrapper .menu-img img {
+  z-index: -1;
+  margin-top: -10%;
+  width: 100%;
+  height: auto;
+}
+.main-wrapper .main-section {
+  margin-top: 2%;
+  width: 100%;
+  margin-left: 4%;
+}
+.main-wrapper .main-section .top-page img {
+  width: 92%;
+  z-index: 1;
+}
+.main-wrapper .main-section .top-page .title {
+  margin-top: -15%;
+  margin-left: 8%;
+  color: white;
+  font-size: 17px;
+  font-family: "Roboto", sans-serif;
+}
+.main-wrapper .main-section .second {
+  margin-top: 9%;
+  color: #d0a380;
+  font-size: 25px;
+  font-family: "Roboto";
+}
+
+.carousel {
+  width: 50%;
+  justify-content: space-around;
+  display: flex;
+}
+.carousel .card {
+  margin: 0 2rem;
+  height: 40vh;
+  border: none;
+  display: flex;
+  width: 90%;
+}
+.carousel .card .btn {
+  right: 0px;
+  border: 0px solid black;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+.carousel .card .btn button {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 12px;
+  color: white;
+  margin-right: -5%;
+}
+.carousel .card .card-img-overlay {
+  position: absolute;
+  z-index: 1;
+}
+.carousel .card .card-title {
+  padding-top: 4rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.carousel .card .card-title h3 {
+  text-align: center;
+  font-size: 19px;
+  font-family: "Roboto", sans-serif;
+}
+.carousel .card .card-text {
+  border: 0px solid;
+  margin-top: 12vh;
+}
+.carousel .card .shape {
+  border-radius: 4%;
+  background-color: #b13f6e;
+  opacity: 0.7;
+  height: 40vh;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+}
+.carousel .card img {
+  position: inherit;
+  height: 40vh;
+  border-radius: 4%;
+}
+
+.home-demo .item {
+  background: #ff3f4d;
+}
+
+.home-demo h2 {
+  color: #fff;
+  text-align: center;
+  padding: 5rem 0;
+  margin: 0;
+  font-style: italic;
+  font-weight: 300;
+}/*# sourceMappingURL=landingpage.css.map */

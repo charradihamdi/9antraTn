@@ -3,7 +3,7 @@ $(function () {
   var owl = $(".owl-carousel");
   owl.owlCarousel({
     items: 4,
-    margin: 10,
+    margin: -100,
     loop: true,
     nav: true,
   });
